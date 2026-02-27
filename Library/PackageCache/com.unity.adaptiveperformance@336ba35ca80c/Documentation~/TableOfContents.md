@@ -1,5 +1,0 @@
-* [Adaptive Performance](./index.md)
-    * [What's new](./whats-new.md)
-    * [Installation](./installing-and-configuring.md)
-    * [Samples](./samples-guide.md)
-    * [Visual scripting](./visual-scripting.md)
