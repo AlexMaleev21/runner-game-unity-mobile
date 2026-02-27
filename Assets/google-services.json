@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "906561753132",
+    "project_id": "runnermobilegame",
+    "storage_bucket": "runnermobilegame.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:906561753132:android:292c603550c911d75d4189",
+        "android_client_info": {
+          "package_name": "com.UnityTechnologies.Mobile3DTemplate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFHDspIu_BLjoky3Tk7TmNb8Hzk6sccYo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
