@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{B865F99F-3B9C-81C4-FC06-8FDF4D9BFC7D}</ProjectGuid>
+    <ProjectGuid>{69CBA573-7F71-67B8-3C7D-720082BBAEC4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Zenject-Editor</AssemblyName>
@@ -732,6 +732,10 @@
       <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Ump.Unity.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Firebase.Database">
+      <HintPath>Assets\Firebase\Plugins\Firebase.Database.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="GoogleMobileAds.Ump">
       <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Ump.dll</HintPath>
       <Private>False</Private>
@@ -1323,7 +1327,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Zenject.csproj">
-      <Project>{84F34573-C218-E61C-64D2-3F81C4583D42}</Project>
+      <Project>{853D6522-E948-9EFF-9FBC-D2C149A56210}</Project>
       <Name>Zenject</Name>
     </ProjectReference>
   </ItemGroup>

@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{DBF685AF-47DE-334F-A230-D853BFDD5209}</ProjectGuid>
+    <ProjectGuid>{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -72,11 +72,15 @@
     <Compile Include="Assets\Scripts\GameManagement\MenuManager.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IPlayerState.cs" />
     <Compile Include="Assets\Scripts\UI\GameOverWindow.cs" />
+    <Compile Include="Assets\Scripts\Leaderboard\LeaderboardEntry.cs" />
     <Compile Include="Assets\Scripts\Auth\AuthWindow.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\States\SlidingState.cs" />
     <Compile Include="Assets\Scripts\UI\InGameUI.cs" />
     <Compile Include="Assets\Scripts\Configs\GameConfig.cs" />
+    <Compile Include="Assets\Scripts\UI\LeaderboardItem.cs" />
+    <Compile Include="Assets\Scripts\Leaderboard\FirebaseLeaderboardService.cs" />
     <Compile Include="Assets\Scripts\Configs\ObstacleSpawnConfig.cs" />
+    <Compile Include="Assets\Scripts\Leaderboard\ILeaderboardService.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Environment\Obstacles\JumpObstacle.cs" />
     <Compile Include="Assets\Scripts\GameStateController.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\PlayerController.cs" />
@@ -88,6 +92,7 @@
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\InputStrategy\EditorInputStrategy.cs" />
     <Compile Include="Assets\Scripts\UI\BaseWindow.cs" />
+    <Compile Include="Assets\Scripts\UI\LeaderboardWindow.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\States\DeadState.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\States\JumpingState.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\PlayerStateMachine.cs" />
@@ -110,6 +115,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile-2-Pass.shader" />
     <None Include="Assets\GoogleMobileAds\GoogleMobileAds.Common.dll" />
+    <None Include="Assets\Firebase\Plugins\x86_64\FirebaseCppDatabase.dll" />
     <None Include="Assets\GoogleMobileAds\GoogleMobileAds.Ump.iOS.dll" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\GoogleMobileAds\GoogleMobileAds.dll" />
@@ -134,6 +140,7 @@
     <None Include="Assets\GoogleMobileAds\GoogleMobileAds.Ump.Unity.dll" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\Firebase\Plugins\Firebase.Database.dll" />
     <None Include="Assets\GoogleMobileAds\GoogleMobileAds.Ump.dll" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-auth-unity\maven-metadata.xml" />
@@ -142,10 +149,12 @@
     <None Include="Assets\Firebase\Plugins\iOS\Firebase.Auth.dll" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\GoogleMobileAds\GoogleMobileAds.Unity.dll" />
+    <None Include="Assets\Firebase\Plugins\iOS\Firebase.Database.dll" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Firebase\Plugins\Firebase.Platform.dll" />
     <None Include="Assets\GoogleMobileAds\GoogleMobileAds.Android.dll" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-database-unity\maven-metadata.xml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\Firebase\Plugins\Google.MiniJson.dll" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
@@ -729,6 +738,10 @@
     </Reference>
     <Reference Include="GoogleMobileAds.Ump.Unity">
       <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Ump.Unity.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Firebase.Database">
+      <HintPath>Assets\Firebase\Plugins\Firebase.Database.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="GoogleMobileAds.Ump">
@@ -1518,23 +1531,23 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="GoogleMobileAds.Editor.csproj">
-      <Project>{0368CD39-701B-6DAF-7727-F10C17D1D683}</Project>
+      <Project>{99BA82E0-B871-FD45-CAB9-7608BC80478C}</Project>
       <Name>GoogleMobileAds.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Zenject-Editor.csproj">
-      <Project>{B865F99F-3B9C-81C4-FC06-8FDF4D9BFC7D}</Project>
+      <Project>{69CBA573-7F71-67B8-3C7D-720082BBAEC4}</Project>
       <Name>Zenject-Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Zenject.csproj">
-      <Project>{84F34573-C218-E61C-64D2-3F81C4583D42}</Project>
+      <Project>{853D6522-E948-9EFF-9FBC-D2C149A56210}</Project>
       <Name>Zenject</Name>
     </ProjectReference>
     <ProjectReference Include="Zenject-ReflectionBaking-Editor.csproj">
-      <Project>{5101CEC3-A80F-303B-A466-CA1C084266B3}</Project>
+      <Project>{D7976CC4-FF8C-7F4D-F8DD-255581B1D135}</Project>
       <Name>Zenject-ReflectionBaking-Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Zenject-PoolMonitor-Editor.csproj">
-      <Project>{178EDE23-7E0B-2BFD-D5CF-CE9A0DEFB194}</Project>
+      <Project>{88E82C8A-C0E6-0C76-7F97-DD3325DD1C10}</Project>
       <Name>Zenject-PoolMonitor-Editor</Name>
     </ProjectReference>
   </ItemGroup>

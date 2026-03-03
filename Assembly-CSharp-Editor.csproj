@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{2F605FD8-D526-D18F-3F07-D41F6083BAE2}</ProjectGuid>
+    <ProjectGuid>{68DCEB20-A789-C364-A4AF-BE5D4400B32D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -68,11 +68,13 @@
     <None Include="Assets\ExternalDependencyManager\Editor\1.2.187\Google.IOSResolver.dll" />
     <None Include="Assets\ExternalDependencyManager\Editor\Google.VersionHandler.dll" />
     <None Include="Assets\ExternalDependencyManager\Editor\1.2.187\Google.VersionHandlerImpl.dll" />
+    <None Include="Assets\Firebase\Editor\FirebaseDatabase_version-13.8.0_manifest.txt" />
     <None Include="Assets\Firebase\Editor\AuthDependencies.xml" />
     <None Include="Assets\Firebase\Editor\AppDependencies.xml" />
     <None Include="Assets\Firebase\Editor\FirebaseAuth_version-13.8.0_manifest.txt" />
     <None Include="Assets\ExternalDependencyManager\Editor\1.2.187\Google.PackageManagerResolver.dll" />
     <None Include="Assets\ExternalDependencyManager\Editor\external-dependency-manager_version-1.2.187_manifest.txt" />
+    <None Include="Assets\Firebase\Editor\DatabaseDependencies.xml" />
     <None Include="Assets\ExternalDependencyManager\Editor\1.2.187\Google.JarResolver.dll" />
     <None Include="Assets\Firebase\Editor\Firebase.Editor.dll" />
   </ItemGroup>
@@ -727,6 +729,10 @@
     </Reference>
     <Reference Include="GoogleMobileAds.Ump.Unity">
       <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Ump.Unity.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Firebase.Database">
+      <HintPath>Assets\Firebase\Plugins\Firebase.Database.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="GoogleMobileAds.Ump">
@@ -1552,27 +1558,27 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{DBF685AF-47DE-334F-A230-D853BFDD5209}</Project>
+      <Project>{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
     <ProjectReference Include="GoogleMobileAds.Editor.csproj">
-      <Project>{0368CD39-701B-6DAF-7727-F10C17D1D683}</Project>
+      <Project>{99BA82E0-B871-FD45-CAB9-7608BC80478C}</Project>
       <Name>GoogleMobileAds.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Zenject-Editor.csproj">
-      <Project>{B865F99F-3B9C-81C4-FC06-8FDF4D9BFC7D}</Project>
+      <Project>{69CBA573-7F71-67B8-3C7D-720082BBAEC4}</Project>
       <Name>Zenject-Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Zenject.csproj">
-      <Project>{84F34573-C218-E61C-64D2-3F81C4583D42}</Project>
+      <Project>{853D6522-E948-9EFF-9FBC-D2C149A56210}</Project>
       <Name>Zenject</Name>
     </ProjectReference>
     <ProjectReference Include="Zenject-ReflectionBaking-Editor.csproj">
-      <Project>{5101CEC3-A80F-303B-A466-CA1C084266B3}</Project>
+      <Project>{D7976CC4-FF8C-7F4D-F8DD-255581B1D135}</Project>
       <Name>Zenject-ReflectionBaking-Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Zenject-PoolMonitor-Editor.csproj">
-      <Project>{178EDE23-7E0B-2BFD-D5CF-CE9A0DEFB194}</Project>
+      <Project>{88E82C8A-C0E6-0C76-7F97-DD3325DD1C10}</Project>
       <Name>Zenject-PoolMonitor-Editor</Name>
     </ProjectReference>
   </ItemGroup>

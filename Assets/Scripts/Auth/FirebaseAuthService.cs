@@ -10,8 +10,9 @@ public class FirebaseAuthService : IAuthService
     private FirebaseUser _user;
 
     public bool IsAuthenticated => _user != null;
-    public string UserId => _user?.UserId;
-    public string UserEmail => _user?.Email;
+    public string UserId => _user.UserId;
+    public string UserEmail => _user.Email;
+    public string UserName => _user.DisplayName;
 
     public FirebaseAuthService()
     {

@@ -9,23 +9,26 @@ public class GameplayManager : IInitializable
 
     private readonly PlayerController _player;
     private readonly ObstacleSpawner _spawner;
-    private readonly ObstacleMover _obstacleMover;
+    private readonly ObstacleManipulator _obstacleMover;
     private readonly SpeedManager _speedManager;
     private readonly ScoreManager _scoreManager;
-    private readonly AdsManager _adsManager; 
+    private readonly AdsManager _adsManager;
+    private readonly ILeaderboardService _leaderboardService;
 
     private InGameUI _inGameUI;
     private GameOverWindow _gameOverWindow;
 
+
     public GameplayManager(
         PlayerController player,
         ObstacleSpawner spawner,
-        ObstacleMover obstacleMover,
+        ObstacleManipulator obstacleMover,
         SpeedManager speedManager,
         ScoreManager scoreManager,
         InGameUI inGameUI,
         GameOverWindow gameOverWindow,
-        AdsManager adsManager)
+        AdsManager adsManager,
+        ILeaderboardService leaderboardService)
     {
         _player = player;
         _spawner = spawner;
@@ -35,11 +38,11 @@ public class GameplayManager : IInitializable
         _inGameUI = inGameUI;
         _gameOverWindow = gameOverWindow;
         _adsManager = adsManager;
+        _leaderboardService = leaderboardService;
     }
 
     public void Initialize()
     {
-        Debug.Log(_adsManager.ToString());
         _adsManager.OnGameContinue += ContinueGameAfterAd;
 
         _inGameUI.Hide();
@@ -96,7 +99,7 @@ public class GameplayManager : IInitializable
         OnExitToMenuRequested?.Invoke();
     }
 
-    public void OnPlayerDied()
+    public async void OnPlayerDied()
     {
         _player.SetEnabled(false);
         _spawner.enabled = false;
@@ -105,6 +108,8 @@ public class GameplayManager : IInitializable
         _gameOverWindow.OnExit += () => ExitToMenu();
         _gameOverWindow.OnWatchAd += OnWatchAdClicked;
         _gameOverWindow.Show();
+
+        await _leaderboardService.SubmitScore(_scoreManager.CurrentScore);
 
         _inGameUI.Hide();
     }

@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{0368CD39-701B-6DAF-7727-F10C17D1D683}</ProjectGuid>
+    <ProjectGuid>{99BA82E0-B871-FD45-CAB9-7608BC80478C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>GoogleMobileAds.Editor</AssemblyName>
@@ -730,6 +730,10 @@
     </Reference>
     <Reference Include="GoogleMobileAds.Ump.Unity">
       <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Ump.Unity.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Firebase.Database">
+      <HintPath>Assets\Firebase\Plugins\Firebase.Database.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="GoogleMobileAds.Ump">

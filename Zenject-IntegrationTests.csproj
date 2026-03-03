@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{FF001E7C-C7C3-9121-DD00-D9AB75843F69}</ProjectGuid>
+    <ProjectGuid>{837A70D7-F72A-49B3-04C9-481CF3DE01CF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Zenject-IntegrationTests</AssemblyName>
@@ -1203,11 +1203,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Zenject-TestFramework.csproj">
-      <Project>{E18D1EE8-2EAE-1A86-9AAF-38D815BD7B76}</Project>
+      <Project>{8A20FB11-7A28-3D33-34C4-E90BADD938B7}</Project>
       <Name>Zenject-TestFramework</Name>
     </ProjectReference>
     <ProjectReference Include="Zenject.csproj">
-      <Project>{84F34573-C218-E61C-64D2-3F81C4583D42}</Project>
+      <Project>{853D6522-E948-9EFF-9FBC-D2C149A56210}</Project>
       <Name>Zenject</Name>
     </ProjectReference>
   </ItemGroup>

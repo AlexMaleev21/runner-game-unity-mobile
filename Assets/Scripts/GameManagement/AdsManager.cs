@@ -9,14 +9,14 @@ public class AdsManager : IInitializable
 
     private readonly AdmobAdsService _adsService;
     private readonly PlayerController _player;
-    private readonly ObstacleMover _obstacleMover;
+    private readonly ObstacleManipulator _obstacleMover;
     private readonly ObstacleSpawner _spawner;
     private readonly SpeedManager _speedManager;
 
     public AdsManager(
         AdmobAdsService adsService,
         PlayerController player,
-        ObstacleMover obstacleMover,
+        ObstacleManipulator obstacleMover,
         ObstacleSpawner spawner,
         SpeedManager speedManager)
     {
@@ -59,11 +59,12 @@ public class AdsManager : IInitializable
         _player.SetEnabled(false);
         await Task.Delay(2500);
 
+        OnGameContinue.Invoke();
+
         _obstacleMover.ResumeGame();
         _speedManager.Resume();
         _player.SetEnabled(true);
         _player.StateMachine.ChangeState(PlayerStateType.Running);
 
-        OnGameContinue?.Invoke();
     }
 }

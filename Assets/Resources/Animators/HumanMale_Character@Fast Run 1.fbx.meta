@@ -1,9 +1,39 @@
 fileFormatVersion: 2
 guid: ec4abe3fe795b6d4f96fcef142201576
 ModelImporter:
-  serializedVersion: 22200
+  serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BaseMat_Character
+    second: {fileID: 2100000, guid: a8cb60c965f3dc24bbfe7793f69eba3b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BaseMat_Character1
+    second: {fileID: 2100000, guid: a8cb60c965f3dc24bbfe7793f69eba3b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__BaseMat_Character
+    second: {fileID: 2100000, guid: d321f3f2df9e8c94595e6094c96972de, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__BaseMat_Character1
+    second: {fileID: 2100000, guid: bdb2cbbc376e81343bec2a767a408a45, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__BaseMat_Character2
+    second: {fileID: 2100000, guid: bdb2cbbc376e81343bec2a767a408a45, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__BaseMat_Character3
+    second: {fileID: 2100000, guid: d321f3f2df9e8c94595e6094c96972de, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -16,8 +46,6 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 0
     motionNodeName: Armature
-    rigImportErrors: 
-    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -87,6 +115,9 @@ ModelImporter:
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
     optimizeBones: 1
+    generateMeshLods: 0
+    meshLodGenerationFlags: 0
+    maximumMeshLod: -1
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8

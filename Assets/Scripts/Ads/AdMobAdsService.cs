@@ -13,7 +13,7 @@ public class AdmobAdsService
 
     public AdmobAdsService()
     {
-        _rewardedAdUnitId = "ca-app-pub-4077245784334425~8535570603";
+        _rewardedAdUnitId = "ca-app-pub-3940256099942544/5224354917";
     }
 
     public void Initialize()

@@ -5,9 +5,6 @@ using UnityEngine;
 
 public class AuthManager : IInitializable
 {
-    public event Action OnLogoutRequested;
-    public event Action OnAuthSuccess;
-
     private readonly IAuthService _authService;
     private AuthWindow _authWindow;
 
@@ -18,6 +15,7 @@ public class AuthManager : IInitializable
     {
         _authService = authService;
         _authWindow = authWindow;
+        Debug.Log($"[AuthManager] Constructed, factory null? {_authWindow == null}\n" + new System.Diagnostics.StackTrace().ToString());
     }
 
     public void Initialize()
@@ -32,6 +30,7 @@ public class AuthManager : IInitializable
 
     public void ShowAuth()
     {
+        Debug.Log(_authWindow);
         _authWindow.Show();
     }
 
@@ -47,12 +46,5 @@ public class AuthManager : IInitializable
     public void Logout()
     {
         _authService.Logout();
-        OnLogoutRequested?.Invoke();
     }
-
-    public void NotifyAuthSuccess()
-    {
-        OnAuthSuccess?.Invoke();
-    }
-
 }

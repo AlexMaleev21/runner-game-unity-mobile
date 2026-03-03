@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using System.Collections.Generic;
 
@@ -5,10 +6,12 @@ using System.Collections.Generic;
 public class ObstacleSpawnConfig : ScriptableObject
 {
     public float initialSafeZone = 20f;
-    public float spawnInterval = 10f;
+    public float baseSpawnInterval = 10f;
+    public float minSpawnInterval = 1f;
     public float laneWidth = 2f;
+    public int obstaclePoolSize = 8;
 
-    [System.Serializable]
+    [Serializable]
     public struct ObstacleTypeData
     {
         public ObstacleType type;
@@ -30,7 +33,7 @@ public class ObstacleSpawnConfig : ScriptableObject
         foreach (var type in obstacleTypes)
             totalWeight += type.spawnWeight;
 
-        float random = Random.Range(0, totalWeight);
+        float random = UnityEngine.Random.Range(0, totalWeight);
         float currentWeight = 0;
 
         foreach (var type in obstacleTypes)

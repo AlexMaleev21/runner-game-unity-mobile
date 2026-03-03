@@ -35,10 +35,7 @@ public class GameOverWindow : BaseWindow
 
     private void OnScoreUpdated(ScoreUpdatedSignal signal)
     {
-        if (_scoreText != null)
-        {
-            _scoreText.text = $"Score: {signal.Score}";
-        }
+        _scoreText.text = $"Score: {signal.Score}";
     }
 
     private void OnDestroy()

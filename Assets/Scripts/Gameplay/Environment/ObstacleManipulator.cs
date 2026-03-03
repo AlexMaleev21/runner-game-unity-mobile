@@ -4,7 +4,7 @@ using UnityEngine;
 using Zenject;
 using Zenject.SpaceFighter;
 
-public class ObstacleMover : MonoBehaviour
+public class ObstacleManipulator : MonoBehaviour
 {
     private float _speed;
     private List<Obstacle> _activeObstacles = new List<Obstacle>();

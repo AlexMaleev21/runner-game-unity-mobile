@@ -6,6 +6,7 @@ public interface IAuthService
     bool IsAuthenticated { get; }
     string UserId { get; }
     string UserEmail { get; }
+    string UserName { get; }
 
     Task<bool> Register(string email, string password, string username);
     Task<bool> Login(string email, string password);

@@ -31,9 +31,6 @@ public class GameStateController : IInitializable, IDisposable
         _signalBus.Subscribe<PlayerDiedSignal>(OnPlayerDied);
         _signalBus.Subscribe<AuthSuccessSignal>(OnAuthSuccess);
 
-        _authManager.OnLogoutRequested += Logout;
-        _authManager.OnAuthSuccess += OnAuthSuccess;
-
         _menuManager.OnStartGameRequested += StartGame;
         _menuManager.OnLogoutRequested += Logout;
 
@@ -102,9 +99,6 @@ public class GameStateController : IInitializable, IDisposable
     {
         _signalBus?.Unsubscribe<PlayerDiedSignal>(OnPlayerDied);
         _signalBus?.Unsubscribe<AuthSuccessSignal>(OnAuthSuccess);
-
-        _authManager.OnLogoutRequested -= Logout;
-        _authManager.OnAuthSuccess -= OnAuthSuccess;
 
         _menuManager.OnStartGameRequested -= StartGame;
         _menuManager.OnLogoutRequested -= Logout;

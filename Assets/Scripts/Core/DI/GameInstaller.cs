@@ -15,6 +15,7 @@ public class GameInstaller : MonoInstaller
     [SerializeField] private GameObject _authWindowPrefab;
     [SerializeField] private GameObject _mainMenuWindowPrefab;
     [SerializeField] private GameObject _gameOverWindowPrefab;
+    [SerializeField] private GameObject _leaderboardWindowPrefab;
     [SerializeField] private GameObject _inGameUIPrefab;
 
     public override void InstallBindings()
@@ -24,6 +25,7 @@ public class GameInstaller : MonoInstaller
         InstallInput();
         InstallAuth();
         InstallAds();
+        InstallLeaderboard();
         InstallPlayer();
         InstallObstacles();
         InstallManagers();
@@ -65,6 +67,10 @@ public class GameInstaller : MonoInstaller
         Container.Bind<AdmobAdsService>().AsSingle();
     }
 
+    private void InstallLeaderboard()
+    {
+        Container.Bind<ILeaderboardService>().To<FirebaseLeaderboardService>().AsSingle();
+    }
     private void InstallPlayer()
     {
         Container.Bind<PlayerStateMachine>().AsSingle();
@@ -85,7 +91,7 @@ public class GameInstaller : MonoInstaller
     {
         Container.Bind<IObstacleFactory>().To<ObstacleFactory>().AsSingle();
         Container.Bind<ObstaclePool>().AsSingle();
-        Container.Bind<ObstacleMover>().FromNewComponentOnNewGameObject().AsSingle().NonLazy();
+        Container.Bind<ObstacleManipulator>().FromNewComponentOnNewGameObject().AsSingle().NonLazy();
         Container.Bind<ObstacleSpawner>().FromNewComponentOnNewGameObject().AsSingle().NonLazy();
     }
 
@@ -105,7 +111,8 @@ public class GameInstaller : MonoInstaller
         Container.Bind<AuthWindow>()
             .FromComponentInNewPrefab(_authWindowPrefab)
             .UnderTransformGroup("UI")
-            .AsSingle();
+            .AsSingle()
+            .NonLazy();
 
         Container.Bind<MainMenuWindow>()
             .FromComponentInNewPrefab(_mainMenuWindowPrefab)
@@ -117,7 +124,11 @@ public class GameInstaller : MonoInstaller
             .UnderTransformGroup("UI")
             .AsSingle();
         
-        Container.Bind<InGameUI>()
+        Container.Bind<LeaderboardWindow>()
+        .FromComponentInNewPrefab(_leaderboardWindowPrefab)
+        .UnderTransformGroup("UI")
+        .AsSingle();
+            Container.Bind<InGameUI>()
             .FromComponentInNewPrefab(_inGameUIPrefab)
             .UnderTransformGroup("UI")
             .AsSingle();
