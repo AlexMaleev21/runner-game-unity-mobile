@@ -17,13 +17,13 @@ public class SlidingState : IPlayerState
     public void Enter()
     {
         _player.SetAnimationTrigger("Slide");
-        _player.SetColliderHeight(_config.slideHeight);
+        _player.SetColliderHeight(_config.SlideHeight);
         _slideStartTime = Time.time;
     }
 
     public void Update()
     {
-        if (Time.time > _slideStartTime + _config.slideDuration)
+        if (Time.time > _slideStartTime + _config.SlideDuration)
         {
             _player.StateMachine.ChangeState(PlayerStateType.Running);
         }
@@ -31,6 +31,6 @@ public class SlidingState : IPlayerState
 
     public void Exit()
     {
-        _player.SetColliderHeight(_config.normalHeight);
+        _player.SetColliderHeight(_config.NormalHeight);
     }
 }

@@ -5,11 +5,17 @@ using System.Collections.Generic;
 [CreateAssetMenu(fileName = "ObstacleSpawnConfig", menuName = "Game/ObstacleSpawnConfig")]
 public class ObstacleSpawnConfig : ScriptableObject
 {
-    public float initialSafeZone = 20f;
-    public float baseSpawnInterval = 10f;
-    public float minSpawnInterval = 1f;
-    public float laneWidth = 2f;
-    public int obstaclePoolSize = 8;
+    [SerializeField] private float initialSafeZone;
+    [SerializeField] private float baseSpawnInterval;
+    [SerializeField] private float minSpawnInterval;
+    [SerializeField] private float laneWidth;
+    [SerializeField] private int obstaclePoolSize;
+
+    public float InitialSafeZone => initialSafeZone;
+    public float BaseSpawnInterval => baseSpawnInterval;
+    public float MinSpawnInterval => minSpawnInterval;
+    public float LaneWidth => laneWidth;
+    public int ObstaclePoolSize => obstaclePoolSize;
 
     [Serializable]
     public struct ObstacleTypeData
@@ -19,7 +25,8 @@ public class ObstacleSpawnConfig : ScriptableObject
         public float spawnWeight;
     }
 
-    public List<ObstacleTypeData> obstacleTypes;
+    [SerializeField] public List<ObstacleTypeData> obstacleTypes;
+    public List<ObstacleTypeData> ObstacleTypes => obstacleTypes;
 
     public GameObject GetPrefab(ObstacleType type)
     {
@@ -49,7 +56,7 @@ public class ObstacleSpawnConfig : ScriptableObject
 
 public enum ObstacleType
 {
-    SwerveObstacle,   
-    SlideObstacle,    
-    JumpObstacle      
+    SwerveObstacle = 1,   
+    SlideObstacle = 2,    
+    JumpObstacle = 3      
 }

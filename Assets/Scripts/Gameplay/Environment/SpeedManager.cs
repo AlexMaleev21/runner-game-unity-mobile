@@ -18,7 +18,7 @@ public class SpeedManager : ITickable
         _obstacleMover = obstacleMover;
         _config = config;
         _signalBus = signalBus;
-        CurrentSpeed = _config.initialSpeed;
+        CurrentSpeed = _config.InitialSpeed;
         _obstacleMover.SetSpeed(CurrentSpeed);
 
         _signalBus.Subscribe<PlayerDiedSignal>(OnPlayerDied);
@@ -27,8 +27,8 @@ public class SpeedManager : ITickable
     public void Tick()
     {
         if (!_isGameActive) return;
-        CurrentSpeed += _config.speedIncreasePerSecond * Time.deltaTime;
-        CurrentSpeed = Mathf.Min(CurrentSpeed, _config.maxSpeed);
+        CurrentSpeed += _config.SpeedIncreasePerSecond * Time.deltaTime;
+        CurrentSpeed = Mathf.Min(CurrentSpeed, _config.MaxSpeed);
         _obstacleMover.SetSpeed(CurrentSpeed);
     }
 
@@ -44,7 +44,7 @@ public class SpeedManager : ITickable
 
     public void ResetSpeed()
     {
-        CurrentSpeed = _config.initialSpeed;
+        CurrentSpeed = _config.InitialSpeed;
         _obstacleMover.SetSpeed(CurrentSpeed);
         _isGameActive = true;
     }

@@ -20,7 +20,7 @@ public class ObstaclePool
         {
             _pools[typeData.type] = new Queue<Obstacle>();
 
-            for (int i = 0; i < _config.obstaclePoolSize; i++)
+            for (int i = 0; i < _config.ObstaclePoolSize; i++)
             {
                 var obstacle = _factory.Create(typeData.type, Vector3.zero);
                 obstacle.transform.SetParent(_poolParent);

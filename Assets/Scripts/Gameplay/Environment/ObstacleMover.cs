@@ -10,8 +10,18 @@ public class ObstacleManipulator : MonoBehaviour
     private List<Obstacle> _activeObstacles = new List<Obstacle>();
     private bool _isGameActive = false;
 
-    [Inject] private ObstaclePool _obstaclePool;
-    [Inject] private SignalBus _signalBus;
+    private ObstaclePool _obstaclePool;
+    private SignalBus _signalBus;
+    
+    [Inject]
+    public void Construct(
+        ObstaclePool obstaclePool,
+        SignalBus signalBus)
+    {
+        _obstaclePool = obstaclePool;
+        _signalBus = signalBus;
+    }
+
     private void Start()
     {
         _signalBus.Subscribe<PlayerDiedSignal>(OnPlayerDied);

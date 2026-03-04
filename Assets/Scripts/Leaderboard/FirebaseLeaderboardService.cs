@@ -18,7 +18,6 @@ public class FirebaseLeaderboardService : ILeaderboardService
     public FirebaseLeaderboardService(IAuthService authService)
     {
         _authService = authService;
-        //Task.Run(() => InitializeAsync());
     }
 
     private async Task InitializeAsync()

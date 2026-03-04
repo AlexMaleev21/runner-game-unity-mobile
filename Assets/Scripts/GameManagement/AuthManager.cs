@@ -1,7 +1,6 @@
-using System;
 using System.Threading.Tasks;
-using Unity.VisualScripting;
 using UnityEngine;
+using Zenject;
 
 public class AuthManager : IInitializable
 {
@@ -15,11 +14,11 @@ public class AuthManager : IInitializable
     {
         _authService = authService;
         _authWindow = authWindow;
-        Debug.Log($"[AuthManager] Constructed, factory null? {_authWindow == null}\n" + new System.Diagnostics.StackTrace().ToString());
     }
 
     public void Initialize()
     {
+        Debug.Log("Auth");
         _authWindow.Hide();
     }
 

@@ -16,7 +16,6 @@ public class InGameUI : MonoBehaviour
 
     private void Start()
     {
-        gameObject.SetActive(false);
         _signalBus.Subscribe<ScoreUpdatedSignal>(OnScoreUpdated);
     }
 

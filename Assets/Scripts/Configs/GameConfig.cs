@@ -3,9 +3,15 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "GameConfig", menuName = "Game/GameConfig")]
 public class GameConfig : ScriptableObject
 {
-    public float initialSpeed = 5f;
-    public float maxSpeed = 15f;
-    public float speedIncreasePerSecond = 0.2f;
-    public float scoreMultiplier = 1f;
-    public float noObstacleTime = 3f;
+    [SerializeField] private float initialSpeed;
+    [SerializeField] private float maxSpeed;
+    [SerializeField] private float speedIncreasePerSecond;
+    [SerializeField] private float scoreMultiplier;
+    [SerializeField] private float noObstacleTime;
+
+    public float InitialSpeed => initialSpeed;
+    public float MaxSpeed => maxSpeed;
+    public float SpeedIncreasePerSecond => speedIncreasePerSecond;
+    public float ScoreMultiplier => scoreMultiplier;
+    public float NoObstacleTime => noObstacleTime;
 }

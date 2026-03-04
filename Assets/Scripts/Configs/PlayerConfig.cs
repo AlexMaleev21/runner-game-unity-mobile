@@ -3,13 +3,24 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PlayerConfig", menuName = "Game/PlayerConfig")]
 public class PlayerConfig : ScriptableObject
 {
-    public float initialSpeed = 5f;
-    public float laneWidth = 2f;
-    public float laneSwitchSpeed = 10f;
-    public float jumpForce = 8f;
-    public float jumpDuration = 1f;
-    public float slideDuration = 1f;
-    public float slideHeight = 0.5f;
-    public float normalHeight = 1f;
-    public LayerMask groundLayer;
+    [SerializeField] private float initialSpeed = 5f;
+    [SerializeField] private float laneWidth = 2f;
+    [SerializeField] private float laneSwitchSpeed = 10f;
+    [SerializeField] private float jumpForce = 8f;
+    [SerializeField] private float jumpDuration = 1f;
+    [SerializeField] private float slideDuration = 1f;
+    [SerializeField] private float slideHeight = 0.5f;
+    [SerializeField] private float normalHeight = 1f;
+    [SerializeField] private LayerMask groundLayer;
+
+    public float InitialSpeed => initialSpeed;
+    public float LaneWidth => laneWidth;
+    public float LaneSwitchSpeed => laneSwitchSpeed;
+    public float JumpForce => jumpForce;
+    public float JumpDuration => jumpDuration;
+    public float SlideDuration => slideDuration;
+    public float SlideHeight => slideHeight;
+    public float NormalHeight => normalHeight;
+    public LayerMask GroundLayer => groundLayer;
+
 }
