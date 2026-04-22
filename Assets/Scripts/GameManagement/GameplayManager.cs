@@ -18,6 +18,8 @@ public class GameplayManager : IInitializable
     private readonly ScoreManager _scoreManager;
     private readonly AdsManager _adsManager;
     private readonly ILeaderboardService _leaderboardService;
+    private readonly CoinMover _coinMover;
+    private readonly CoinSpawner _coinSpawner;
 
     private InGameUI _inGameUI;
     private GameOverWindow _gameOverWindow;
@@ -34,7 +36,9 @@ public class GameplayManager : IInitializable
         AdsManager adsManager,
         ILeaderboardService leaderboardService,
         SignalBus signalBus,
-        BackgroundMover backgroundMover)
+        BackgroundMover backgroundMover,
+        CoinMover coinMover,
+        CoinSpawner coinSpawner)
     {
         _player = player;
         _spawner = spawner;
@@ -47,6 +51,8 @@ public class GameplayManager : IInitializable
         _leaderboardService = leaderboardService;
         _signalBus = signalBus;
         _backgroundMover = backgroundMover;
+        _coinMover = coinMover;
+        _coinSpawner = coinSpawner;
     }
 
     public void Initialize()
@@ -72,6 +78,8 @@ public class GameplayManager : IInitializable
         _speedManager.ResetSpeed();
         _scoreManager.ResetScore();
 
+        _coinMover.StartMovement();
+        _coinSpawner.StartSpawning();
         _inGameUI.Show();
     }
 
@@ -93,6 +101,10 @@ public class GameplayManager : IInitializable
         _player.StateMachine.ChangeState(PlayerStateType.Running);
         _spawner.enabled = true;
 
+        _coinMover.ClearAllCoins();
+        _coinMover.StartMovement();
+        _coinSpawner.StartSpawning();
+
         _inGameUI.Show();
     }
 
@@ -106,6 +118,10 @@ public class GameplayManager : IInitializable
         _player.ResetToStart();
         _spawner.enabled = false;
 
+        _coinMover.StopMovement();
+        _coinSpawner.StopSpawning();
+        _coinMover.ClearAllCoins();
+
         _gameOverWindow.Hide();
         OnExitToMenuRequested?.Invoke();
     }
@@ -115,6 +131,9 @@ public class GameplayManager : IInitializable
         _backgroundMover.StopMovement();
         _player.SetEnabled(false);
         _spawner.enabled = false;
+
+        _coinMover.StopMovement();
+        _coinSpawner.StopSpawning();
 
         _gameOverWindow.OnRestart += () => OnRestartRequested?.Invoke();
         _gameOverWindow.OnExit += () => ExitToMenu();
@@ -149,6 +168,7 @@ public class GameplayManager : IInitializable
         _player.StateMachine.ChangeState(PlayerStateType.Running);
         _obstacleMover.ResumeGame();
         _speedManager.Resume();
+        _backgroundMover.StartMovement();
 
         _scoreManager.ResumeScore();
         _inGameUI?.Show();
