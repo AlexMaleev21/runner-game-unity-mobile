@@ -16,4 +16,5 @@
 *.VC.db
 *.pidb.meta
 *.unitypackage
+*.vs
 Assets/AssetStoreTools*

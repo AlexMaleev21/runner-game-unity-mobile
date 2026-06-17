@@ -1,8 +1,9 @@
 using System;
+using UnityEngine;
 
 [Serializable]
 public class AuthData
 {
-    public string Email;
-    public string Password;
+    [SerializeField] private string Email;
+    [SerializeField] private string Password;
 }

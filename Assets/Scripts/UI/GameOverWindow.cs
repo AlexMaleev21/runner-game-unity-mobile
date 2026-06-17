@@ -26,7 +26,6 @@ public class GameOverWindow : BaseWindow
 
     private void Start()
     {
-        gameObject.SetActive(false);
         _restartButton.onClick.AddListener(() => OnRestart?.Invoke());
         _exitButton.onClick.AddListener(() => OnExit?.Invoke());
         _watchAdButton.onClick.AddListener(() => OnWatchAd?.Invoke());

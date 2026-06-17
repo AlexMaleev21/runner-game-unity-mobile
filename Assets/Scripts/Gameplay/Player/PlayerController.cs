@@ -5,12 +5,11 @@ using Zenject.SpaceFighter;
 
 public class PlayerController : MonoBehaviour
 {
-    //
-    [Inject] private IInputHandler _inputHandler;
-    [Inject] private PlayerConfig _config;
-    [Inject] private PlayerStateMachine _stateMachine;
-    [Inject] private SignalBus _signalBus;
-    [Inject] private Transform _playerSpawnPoint;
+    private IInputHandler _inputHandler;
+    private PlayerConfig _config;
+    private PlayerStateMachine _stateMachine;
+    private SignalBus _signalBus;
+    private Transform _playerSpawnPoint;
 
     private Rigidbody _rigidbody;
     private Collider _playerCollider;
@@ -22,6 +21,20 @@ public class PlayerController : MonoBehaviour
 
     public PlayerStateMachine StateMachine => _stateMachine;
 
+    [Inject]
+    public void Construct(
+        IInputHandler inputHandler,
+        PlayerConfig config,
+        PlayerStateMachine stateMachine,
+        SignalBus signalBus,
+        Transform playerSpawnPoint)
+    {
+        _inputHandler = inputHandler;
+        _config = config;
+        _stateMachine = stateMachine;
+        _signalBus = signalBus;
+        _playerSpawnPoint = playerSpawnPoint;
+    }
 
     private void Awake()
     {
@@ -44,14 +57,14 @@ public class PlayerController : MonoBehaviour
 
         _stateMachine.Update();
 
-        _targetX = _currentLane * _config.laneWidth;
+        _targetX = _currentLane * _config.LaneWidth;
 
         Vector3 targetPosition = new Vector3(
             _targetX,
             transform.position.y,
             transform.position.z
         );
-        transform.position = Vector3.Lerp(transform.position, targetPosition, _config.laneSwitchSpeed * Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, targetPosition, _config.LaneSwitchSpeed * Time.deltaTime);
     }
 
     private void HandleInput(InputAction action)
@@ -85,7 +98,7 @@ public class PlayerController : MonoBehaviour
 
     public bool IsGrounded()
     {
-        return Physics.Raycast(transform.position, Vector3.down, 1.1f, _config.groundLayer);
+        return Physics.Raycast(transform.position, Vector3.down, 1.1f, _config.GroundLayer);
     }
 
     public float GetAnimationDuration(string clipName)

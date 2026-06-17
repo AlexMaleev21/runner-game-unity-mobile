@@ -1,6 +1,6 @@
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
+using Zenject;
 
 public class MenuManager : IInitializable
 {
@@ -20,7 +20,7 @@ public class MenuManager : IInitializable
 
     public void Initialize()
     {
-        HideMenu();
+        //HideMenu();
     }
 
     public void ShowMenu()

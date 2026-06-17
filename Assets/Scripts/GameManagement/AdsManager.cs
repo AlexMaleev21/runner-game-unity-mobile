@@ -5,7 +5,7 @@ using Zenject;
 
 public class AdsManager : IInitializable
 {
-    public event Action OnGameContinue;
+    public event Action OnRewardedAdCompleted;
 
     private readonly AdmobAdsService _adsService;
     private readonly PlayerController _player;
@@ -49,22 +49,8 @@ public class AdsManager : IInitializable
             }
         );
     }
-
-    private async void OnAdRewarded()
+    private void OnAdRewarded()
     {
-        _obstacleMover.RemoveClosestObstacle(_player.transform.position.z);
-
-        _spawner.PauseSpawn(1f);
-
-        _player.SetEnabled(false);
-        await Task.Delay(2500);
-
-        OnGameContinue.Invoke();
-
-        _obstacleMover.ResumeGame();
-        _speedManager.Resume();
-        _player.SetEnabled(true);
-        _player.StateMachine.ChangeState(PlayerStateType.Running);
-
+        OnRewardedAdCompleted?.Invoke();
     }
 }

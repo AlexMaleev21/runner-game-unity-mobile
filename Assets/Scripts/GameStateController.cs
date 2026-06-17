@@ -11,6 +11,7 @@ public class GameStateController : IInitializable, IDisposable
     private readonly AuthManager _authManager;
     private readonly MenuManager _menuManager;
     private readonly GameplayManager _gameplayManager;
+    private readonly BackgroundMover _backgroundMover;
 
     private GameState _currentState;
 
@@ -18,18 +19,22 @@ public class GameStateController : IInitializable, IDisposable
         SignalBus signalBus,
         AuthManager authManager,
         MenuManager menuManager,
-        GameplayManager gameplayManager)
+        GameplayManager gameplayManager,
+        BackgroundMover backgroundMover)
     {
         _signalBus = signalBus;
         _authManager = authManager;
         _menuManager = menuManager;
         _gameplayManager = gameplayManager;
+        _backgroundMover = backgroundMover;
     }
 
     public void Initialize()
     {
+        Application.targetFrameRate = 60;
         _signalBus.Subscribe<PlayerDiedSignal>(OnPlayerDied);
         _signalBus.Subscribe<AuthSuccessSignal>(OnAuthSuccess);
+        _signalBus.Subscribe<GameResumedSignal>(OnGameResumed);
 
         _menuManager.OnStartGameRequested += StartGame;
         _menuManager.OnLogoutRequested += Logout;
@@ -88,6 +93,11 @@ public class GameStateController : IInitializable, IDisposable
         _menuManager.ShowMenu();
     }
 
+    private void OnGameResumed()
+    {
+        _currentState = GameState.Playing;
+    }
+
     private void OnPlayerDied()
     {
         if (_currentState != GameState.Playing) return;
@@ -107,3 +117,5 @@ public class GameStateController : IInitializable, IDisposable
         _gameplayManager.OnExitToMenuRequested -= HandleExitToMenu;
     }
 }
+
+public struct GameResumedSignal { }

@@ -6,6 +6,7 @@ using Zenject;
 public class InGameUI : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _scoreText;
+    [SerializeField] private TextMeshProUGUI _coinText;
     private SignalBus _signalBus;
 
     [Inject]
@@ -16,7 +17,6 @@ public class InGameUI : MonoBehaviour
 
     private void Start()
     {
-        gameObject.SetActive(false);
         _signalBus.Subscribe<ScoreUpdatedSignal>(OnScoreUpdated);
     }
 
@@ -24,6 +24,12 @@ public class InGameUI : MonoBehaviour
     {
         if (_scoreText != null)
             _scoreText.text = $"Score: {signal.Score}";
+    }
+
+    public void UpdateCoinText(int coins)
+    {
+        if (_coinText != null)
+            _coinText.text = $"Coins: {coins}";
     }
 
     public void Show()

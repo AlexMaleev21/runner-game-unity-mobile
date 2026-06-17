@@ -25,7 +25,7 @@ public class ScoreManager : ITickable
     {
         if (!_isGameActive) return;
 
-        _scoreAdd += Time.deltaTime * 10 * _config.scoreMultiplier;
+        _scoreAdd += Time.deltaTime * 10 * _config.ScoreMultiplier;
         _currentScore = Mathf.RoundToInt(_scoreAdd);
         _signalBus.Fire(new ScoreUpdatedSignal { Score = _currentScore });
     }

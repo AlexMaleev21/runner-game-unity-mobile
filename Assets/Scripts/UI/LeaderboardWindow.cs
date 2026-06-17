@@ -67,7 +67,6 @@ public class LeaderboardWindow : BaseWindow
             var best = await _leaderboardService.GetPlayerBestScore(_authService.UserId);
             int rank = await _leaderboardService.GetPlayerRank(_authService.UserId);
             _playerItem.SetData(rank, best.username, best.score);
-            Debug.Log("2");
         }
     }
 }

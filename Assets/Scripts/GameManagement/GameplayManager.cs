@@ -1,19 +1,25 @@
+using Cysharp.Threading.Tasks;
+using GoogleMobileAds.Ump.Api;
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
+using Zenject;
 
 public class GameplayManager : IInitializable
 {
     public event Action OnExitToMenuRequested;
     public event Action OnRestartRequested;
 
+    private SignalBus _signalBus;
     private readonly PlayerController _player;
     private readonly ObstacleSpawner _spawner;
     private readonly ObstacleManipulator _obstacleMover;
+    private readonly BackgroundMover _backgroundMover;
     private readonly SpeedManager _speedManager;
     private readonly ScoreManager _scoreManager;
     private readonly AdsManager _adsManager;
     private readonly ILeaderboardService _leaderboardService;
+    private readonly CoinMover _coinMover;
+    private readonly CoinSpawner _coinSpawner;
 
     private InGameUI _inGameUI;
     private GameOverWindow _gameOverWindow;
@@ -28,7 +34,11 @@ public class GameplayManager : IInitializable
         InGameUI inGameUI,
         GameOverWindow gameOverWindow,
         AdsManager adsManager,
-        ILeaderboardService leaderboardService)
+        ILeaderboardService leaderboardService,
+        SignalBus signalBus,
+        BackgroundMover backgroundMover,
+        CoinMover coinMover,
+        CoinSpawner coinSpawner)
     {
         _player = player;
         _spawner = spawner;
@@ -39,12 +49,15 @@ public class GameplayManager : IInitializable
         _gameOverWindow = gameOverWindow;
         _adsManager = adsManager;
         _leaderboardService = leaderboardService;
+        _signalBus = signalBus;
+        _backgroundMover = backgroundMover;
+        _coinMover = coinMover;
+        _coinSpawner = coinSpawner;
     }
 
     public void Initialize()
     {
-        _adsManager.OnGameContinue += ContinueGameAfterAd;
-
+        _adsManager.OnRewardedAdCompleted += OnAdRewarded;
         _inGameUI.Hide();
         _gameOverWindow.Hide();
         _player.StateMachine.ChangeState(PlayerStateType.Idle);
@@ -60,9 +73,13 @@ public class GameplayManager : IInitializable
         _player.StateMachine.ChangeState(PlayerStateType.Running);
         _spawner.enabled = true;
 
+        _backgroundMover.StartMovement();
+
         _speedManager.ResetSpeed();
         _scoreManager.ResetScore();
 
+        _coinMover.StartMovement();
+        _coinSpawner.StartSpawning();
         _inGameUI.Show();
     }
 
@@ -76,11 +93,17 @@ public class GameplayManager : IInitializable
         _spawner.ResetSpawner();
         _speedManager.ResetSpeed();
         _scoreManager.ResetScore();
+        _backgroundMover.ResetBackground();
+        _backgroundMover.StartMovement();
 
         _player.ResetToStart();
         _player.SetEnabled(true);
         _player.StateMachine.ChangeState(PlayerStateType.Running);
         _spawner.enabled = true;
+
+        _coinMover.ClearAllCoins();
+        _coinMover.StartMovement();
+        _coinSpawner.StartSpawning();
 
         _inGameUI.Show();
     }
@@ -95,14 +118,22 @@ public class GameplayManager : IInitializable
         _player.ResetToStart();
         _spawner.enabled = false;
 
+        _coinMover.StopMovement();
+        _coinSpawner.StopSpawning();
+        _coinMover.ClearAllCoins();
+
         _gameOverWindow.Hide();
         OnExitToMenuRequested?.Invoke();
     }
 
     public async void OnPlayerDied()
     {
+        _backgroundMover.StopMovement();
         _player.SetEnabled(false);
         _spawner.enabled = false;
+
+        _coinMover.StopMovement();
+        _coinSpawner.StopSpawning();
 
         _gameOverWindow.OnRestart += () => OnRestartRequested?.Invoke();
         _gameOverWindow.OnExit += () => ExitToMenu();
@@ -119,10 +150,28 @@ public class GameplayManager : IInitializable
         _adsManager.ShowRewardedAd();
     }
 
-    private void ContinueGameAfterAd()
+    private async void OnAdRewarded()
     {
-        _gameOverWindow.Hide();
-        Debug.Log("Continue after ad");
-        _inGameUI.Show();
+
+        _obstacleMover.RemoveClosestObstacle(_player.transform.position.z);
+
+        _spawner.PauseSpawn(2.5f);
+
+        _player.SetEnabled(false);
+
+        _gameOverWindow?.Hide();
+        await UniTask.Delay(2500);
+
+        _signalBus.Fire(new GameResumedSignal());
+        _player.Ressurect();
+        _player.SetEnabled(true);
+        _player.StateMachine.ChangeState(PlayerStateType.Running);
+        _obstacleMover.ResumeGame();
+        _speedManager.Resume();
+        _backgroundMover.StartMovement();
+
+        _scoreManager.ResumeScore();
+        _inGameUI?.Show();
+
     }
 }

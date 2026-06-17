@@ -18,13 +18,13 @@ public class JumpingState : IPlayerState
     public void Enter()
     {
         _player.SetAnimationTrigger("Jump");
-        _rigidbody.AddForce(Vector3.up * _config.jumpForce, ForceMode.Impulse);
+        _rigidbody.AddForce(Vector3.up * _config.JumpForce, ForceMode.Impulse);
         _jumpTime = Time.time;
     }
 
     public void Update()
     {
-        if (Time.time > _jumpTime + _config.jumpDuration)
+        if (Time.time > _jumpTime + _config.JumpDuration)
         {
             _player.StateMachine.ChangeState(PlayerStateType.Running);
         }

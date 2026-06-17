@@ -3,52 +3,48 @@
   "WorkspaceRootPath": "D:\\TestTasks\\RunnerGameUnity\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\ui\\leaderboardwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\leaderboardwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|d:\\testtasks\\runnergameunity\\assets\\scripts\\gameplay\\environment\\colectibles\\coinspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\environment\\colectibles\\coinspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|d:\\testtasks\\runnergameunity\\assets\\scripts\\ads\\admobadsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ads\\admobadsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|d:\\testtasks\\runnergameunity\\assets\\scripts\\gameplay\\environment\\colectibles\\coinmover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\environment\\colectibles\\coinmover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\gamemanagement\\adsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanagement\\adsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\gameplay\\environment\\colectibles\\coinpool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\environment\\colectibles\\coinpool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\core\\di\\gameinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\core\\di\\gameinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\gameplay\\environment\\colectibles\\coinfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\environment\\colectibles\\coinfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\ui\\mainmenuwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\mainmenuwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\configs\\coinconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\configs\\coinconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\gamemanagement\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanagement\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\gameplay\\environment\\colectibles\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\environment\\colectibles\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|d:\\testtasks\\runnergameunity\\assets\\scripts\\gamemanagement\\authmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanagement\\authmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\ui\\basewindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\basewindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\gameplay\\environment\\obstaclemover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\environment\\obstaclemover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\gamestatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamestatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\ui\\gameoverwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\gameoverwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\gamemanagement\\gameplaymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanagement\\gameplaymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\auth\\authwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\auth\\authwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\gameplay\\player\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\player\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\gameplay\\environment\\speedmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\environment\\speedmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\gameplay\\environment\\obstaclespawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -59,28 +55,100 @@
       "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\environment\\obstaclepool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\gameplay\\environment\\obstaclemanipulator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\environment\\obstaclemanipulator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\gameplay\\environment\\obstaclefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\environment\\obstaclefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\gameplay\\environment\\backgroundmover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\environment\\backgroundmover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\core\\di\\playerinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\core\\di\\playerinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\auth\\firebaseauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\auth\\firebaseauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\auth\\authwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\auth\\authwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\configs\\obstaclespawnconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\configs\\obstaclespawnconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\configs\\gameconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\configs\\gameconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\ads\\admobadsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ads\\admobadsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\core\\di\\adsinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\core\\di\\adsinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\configs\\playerconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\configs\\playerconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\core\\di\\uiinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\core\\di\\uiinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\gamemanagement\\adsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanagement\\adsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\gamemanagement\\authmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanagement\\authmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\gamemanagement\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanagement\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\gameplay\\player\\playerstatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\player\\playerstatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\inputstrategy\\editorinputstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inputstrategy\\editorinputstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\inputstrategy\\inputhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inputstrategy\\inputhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\inputstrategy\\mobileinputstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inputstrategy\\mobileinputstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\leaderboard\\firebaseleaderboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\leaderboard\\firebaseleaderboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\interfaces\\iinputhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interfaces\\iinputhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\ui\\leaderboarditem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\leaderboarditem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\interfaces\\iinputstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interfaces\\iinputstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\interfaces\\iobstaclefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interfaces\\iobstaclefactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\interfaces\\iplayerstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interfaces\\iplayerstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\leaderboard\\firebaseleaderboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\leaderboard\\firebaseleaderboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\leaderboard\\ileaderboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -91,8 +159,84 @@
       "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\leaderboard\\leaderboardentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\gameplay\\player\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\player\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\ui\\basewindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\basewindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\ui\\gameoverwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\gameoverwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\ui\\ingameui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\ingameui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\ui\\leaderboarditem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\leaderboarditem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\ui\\leaderboardwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\leaderboardwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\scoremanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\scoremanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\ui\\mainmenuwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\mainmenuwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\core\\di\\gameinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\core\\di\\gameinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\core\\di\\managersinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\core\\di\\managersinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\core\\di\\leaderboardinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\core\\di\\leaderboardinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\core\\di\\inputinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\core\\di\\inputinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\core\\di\\obstaclesinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\core\\di\\obstaclesinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\core\\di\\signalsinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\core\\di\\signalsinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\core\\di\\configsinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\core\\di\\configsinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\core\\di\\authinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\core\\di\\authinstaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\gameplay\\player\\states\\jumpingstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\player\\states\\jumpingstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\gameplay\\player\\states\\runningstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\player\\states\\runningstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\gameplay\\player\\states\\slidingstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\player\\states\\slidingstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|D:\\TestTasks\\RunnerGameUnity\\assets\\scripts\\auth\\authdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AFA535F-9E81-EC1F-678B-7FAC32C890C0}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\auth\\authdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Environment\\ObstacleManipulator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Gameplay\\Environment\\ObstacleManipulator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -102,222 +246,85 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CoinSpawner.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Environment\\Colectibles\\CoinSpawner.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\Environment\\Colectibles\\CoinSpawner.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Environment\\Colectibles\\CoinSpawner.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\Environment\\Colectibles\\CoinSpawner.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T16:18:26.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AdMobAdsService.cs",
-              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Ads\\AdMobAdsService.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Ads\\AdMobAdsService.cs",
-              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Ads\\AdMobAdsService.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Ads\\AdMobAdsService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABDAAAAAAAAAA==",
+              "Title": "CoinMover.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Environment\\Colectibles\\CoinMover.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\Environment\\Colectibles\\CoinMover.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Environment\\Colectibles\\CoinMover.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\Environment\\Colectibles\\CoinMover.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T13:27:28.833Z",
+              "WhenOpened": "2026-04-22T16:17:56.237Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AuthManager.cs",
-              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\GameManagement\\AuthManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\GameManagement\\AuthManager.cs",
-              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\GameManagement\\AuthManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\GameManagement\\AuthManager.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACEAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T22:07:22.616Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MenuManager.cs",
-              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\GameManagement\\MenuManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\GameManagement\\MenuManager.cs",
-              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\GameManagement\\MenuManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\GameManagement\\MenuManager.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAowB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T19:49:36.179Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "GameplayManager.cs",
-              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\GameManagement\\GameplayManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\GameManagement\\GameplayManager.cs",
-              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\GameManagement\\GameplayManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\GameManagement\\GameplayManager.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAASwC0AAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T19:51:21.189Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AdsManager.cs",
-              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\GameManagement\\AdsManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\GameManagement\\AdsManager.cs",
-              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\GameManagement\\AdsManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\GameManagement\\AdsManager.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAowD0AAAAMAAAAAAAAAA==",
+              "Title": "CoinPool.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Environment\\Colectibles\\CoinPool.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\Environment\\Colectibles\\CoinPool.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Environment\\Colectibles\\CoinPool.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\Environment\\Colectibles\\CoinPool.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T21:26:40.334Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-22T16:17:16.637Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "GameInstaller.cs",
-              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Core\\DI\\GameInstaller.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Core\\DI\\GameInstaller.cs",
-              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Core\\DI\\GameInstaller.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Core\\DI\\GameInstaller.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAAwGgAAABIAAAAAAAAAA==",
+              "Title": "CoinFactory.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Environment\\Colectibles\\CoinFactory.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\Environment\\Colectibles\\CoinFactory.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Environment\\Colectibles\\CoinFactory.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\Environment\\Colectibles\\CoinFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T20:00:54.968Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "GameOverWindow.cs",
-              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\UI\\GameOverWindow.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\GameOverWindow.cs",
-              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\UI\\GameOverWindow.cs",
-              "RelativeToolTip": "Assets\\Scripts\\UI\\GameOverWindow.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAIBJwAkAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T19:51:11.364Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "BaseWindow.cs",
-              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\UI\\BaseWindow.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\BaseWindow.cs",
-              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\UI\\BaseWindow.cs",
-              "RelativeToolTip": "Assets\\Scripts\\UI\\BaseWindow.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T01:13:59.898Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "GameStateController.cs",
-              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\GameStateController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\GameStateController.cs",
-              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\GameStateController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\GameStateController.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAIwEQAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T19:49:57.252Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LeaderboardWindow.cs",
-              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\UI\\LeaderboardWindow.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\LeaderboardWindow.cs",
-              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\UI\\LeaderboardWindow.cs",
-              "RelativeToolTip": "Assets\\Scripts\\UI\\LeaderboardWindow.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAiwEQAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T18:29:03.574Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AuthWindow.cs",
-              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Auth\\AuthWindow.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Auth\\AuthWindow.cs",
-              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Auth\\AuthWindow.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Auth\\AuthWindow.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAuwIYAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T23:45:56.061Z"
+              "WhenOpened": "2026-04-22T16:16:49.824Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "MainMenuWindow.cs",
-              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\UI\\MainMenuWindow.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\MainMenuWindow.cs",
-              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\UI\\MainMenuWindow.cs",
-              "RelativeToolTip": "Assets\\Scripts\\UI\\MainMenuWindow.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T19:48:54.206Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ObstacleSpawner.cs",
-              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Environment\\ObstacleSpawner.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\Environment\\ObstacleSpawner.cs",
-              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Environment\\ObstacleSpawner.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\Environment\\ObstacleSpawner.cs",
+              "Title": "CoinConfig.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Configs\\CoinConfig.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Configs\\CoinConfig.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Configs\\CoinConfig.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Configs\\CoinConfig.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T01:29:05.726Z"
+              "WhenOpened": "2026-04-22T16:15:32.728Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ObstacleManipulator.cs",
-              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Environment\\ObstacleManipulator.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\Environment\\ObstacleManipulator.cs",
-              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Environment\\ObstacleManipulator.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\Environment\\ObstacleManipulator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAlAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "Coin.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Environment\\Colectibles\\Coin.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\Environment\\Colectibles\\Coin.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Environment\\Colectibles\\Coin.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\Environment\\Colectibles\\Coin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T01:28:01.566Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "FirebaseAuthService.cs",
-              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Auth\\FirebaseAuthService.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Auth\\FirebaseAuthService.cs",
-              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Auth\\FirebaseAuthService.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Auth\\FirebaseAuthService.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAYwA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T15:33:04.647Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "IAuthService.cs",
-              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Interfaces\\IAuthService.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Interfaces\\IAuthService.cs",
-              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Interfaces\\IAuthService.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Interfaces\\IAuthService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T15:32:44.464Z"
+              "WhenOpened": "2026-04-22T16:14:49.144Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "ObstaclePool.cs",
-              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Environment\\ObstaclePool.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\Environment\\ObstaclePool.cs",
-              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Environment\\ObstaclePool.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\Environment\\ObstaclePool.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T15:17:00.592Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
               "Title": "ObstacleFactory.cs",
               "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Environment\\ObstacleFactory.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\Environment\\ObstacleFactory.cs",
@@ -329,19 +336,367 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "FirebaseLeaderboardService.cs",
-              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Leaderboard\\FirebaseLeaderboardService.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Leaderboard\\FirebaseLeaderboardService.cs",
-              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Leaderboard\\FirebaseLeaderboardService.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Leaderboard\\FirebaseLeaderboardService.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAcwDgAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "ObstacleMover.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Environment\\ObstacleMover.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\Environment\\ObstacleMover.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Environment\\ObstacleMover.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\Environment\\ObstacleMover.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAuwBcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T15:26:34.584Z"
+              "WhenOpened": "2026-03-04T15:01:32.68Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ObstaclePool.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Environment\\ObstaclePool.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\Environment\\ObstaclePool.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Environment\\ObstaclePool.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\Environment\\ObstaclePool.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T15:17:00.592Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ObstacleSpawner.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Environment\\ObstacleSpawner.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\Environment\\ObstacleSpawner.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Environment\\ObstacleSpawner.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\Environment\\ObstacleSpawner.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T01:29:05.726Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SpeedManager.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Environment\\SpeedManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\Environment\\SpeedManager.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Environment\\SpeedManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\Environment\\SpeedManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T14:28:44.97Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PlayerController.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Player\\PlayerController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\Player\\PlayerController.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Player\\PlayerController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\Player\\PlayerController.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T15:14:07.001Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AuthWindow.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Auth\\AuthWindow.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Auth\\AuthWindow.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Auth\\AuthWindow.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Auth\\AuthWindow.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAIcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T23:45:56.061Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ObstacleSpawnConfig.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Configs\\ObstacleSpawnConfig.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Configs\\ObstacleSpawnConfig.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Configs\\ObstacleSpawnConfig.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Configs\\ObstacleSpawnConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T14:19:57.937Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "GameConfig.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Configs\\GameConfig.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Configs\\GameConfig.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Configs\\GameConfig.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Configs\\GameConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T15:24:03.763Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GameStateController.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\GameStateController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameStateController.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\GameStateController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameStateController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowCEAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T19:49:57.252Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "BackgroundMover.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Environment\\BackgroundMover.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\Environment\\BackgroundMover.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Environment\\BackgroundMover.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\Environment\\BackgroundMover.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T13:45:15.975Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GameplayManager.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\GameManagement\\GameplayManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameManagement\\GameplayManager.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\GameManagement\\GameplayManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameManagement\\GameplayManager.cs",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAmwJcAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T19:51:21.189Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PlayerInstaller.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Core\\DI\\PlayerInstaller.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Core\\DI\\PlayerInstaller.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Core\\DI\\PlayerInstaller.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Core\\DI\\PlayerInstaller.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T11:48:47.805Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "FirebaseAuthService.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Auth\\FirebaseAuthService.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Auth\\FirebaseAuthService.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Auth\\FirebaseAuthService.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Auth\\FirebaseAuthService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T15:33:04.647Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 20,
+              "Title": "AdMobAdsService.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Ads\\AdMobAdsService.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Ads\\AdMobAdsService.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Ads\\AdMobAdsService.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Ads\\AdMobAdsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T13:27:28.833Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "AdsInstaller.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Core\\DI\\AdsInstaller.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Core\\DI\\AdsInstaller.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Core\\DI\\AdsInstaller.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Core\\DI\\AdsInstaller.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T11:48:29.871Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "PlayerConfig.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Configs\\PlayerConfig.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Configs\\PlayerConfig.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Configs\\PlayerConfig.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Configs\\PlayerConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T11:35:51.971Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "UIInstaller.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Core\\DI\\UIInstaller.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Core\\DI\\UIInstaller.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Core\\DI\\UIInstaller.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Core\\DI\\UIInstaller.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T11:49:51.205Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "AdsManager.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\GameManagement\\AdsManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameManagement\\AdsManager.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\GameManagement\\AdsManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameManagement\\AdsManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T21:26:40.334Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "AuthManager.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\GameManagement\\AuthManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameManagement\\AuthManager.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\GameManagement\\AuthManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameManagement\\AuthManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T22:07:22.616Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "MenuManager.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\GameManagement\\MenuManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameManagement\\MenuManager.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\GameManagement\\MenuManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameManagement\\MenuManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T19:49:36.179Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "PlayerStateMachine.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Player\\PlayerStateMachine.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\Player\\PlayerStateMachine.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Player\\PlayerStateMachine.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\Player\\PlayerStateMachine.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T15:00:25.365Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "EditorInputStrategy.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\InputStrategy\\EditorInputStrategy.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\InputStrategy\\EditorInputStrategy.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\InputStrategy\\EditorInputStrategy.cs",
+              "RelativeToolTip": "Assets\\Scripts\\InputStrategy\\EditorInputStrategy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T15:00:21.674Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "InputHandler.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\InputStrategy\\InputHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\InputStrategy\\InputHandler.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\InputStrategy\\InputHandler.cs",
+              "RelativeToolTip": "Assets\\Scripts\\InputStrategy\\InputHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T15:00:20.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "MobileInputStrategy.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\InputStrategy\\MobileInputStrategy.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\InputStrategy\\MobileInputStrategy.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\InputStrategy\\MobileInputStrategy.cs",
+              "RelativeToolTip": "Assets\\Scripts\\InputStrategy\\MobileInputStrategy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T15:00:17.911Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "IObstacleFactory.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Interfaces\\IObstacleFactory.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Interfaces\\IObstacleFactory.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Interfaces\\IObstacleFactory.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Interfaces\\IObstacleFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T15:00:12.211Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "IPlayerState.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Interfaces\\IPlayerState.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Interfaces\\IPlayerState.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Interfaces\\IPlayerState.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Interfaces\\IPlayerState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T15:00:10.407Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "LeaderboardEntry.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Leaderboard\\LeaderboardEntry.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Leaderboard\\LeaderboardEntry.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Leaderboard\\LeaderboardEntry.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Leaderboard\\LeaderboardEntry.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T15:22:58.694Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "BaseWindow.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\UI\\BaseWindow.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\BaseWindow.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\UI\\BaseWindow.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\BaseWindow.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T01:13:59.898Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "GameOverWindow.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\UI\\GameOverWindow.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\GameOverWindow.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\UI\\GameOverWindow.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\GameOverWindow.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T19:51:11.364Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "InGameUI.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\UI\\InGameUI.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\InGameUI.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\UI\\InGameUI.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\InGameUI.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T12:45:35.32Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
               "Title": "ILeaderboardService.cs",
               "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Leaderboard\\ILeaderboardService.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Leaderboard\\ILeaderboardService.cs",
@@ -353,7 +708,43 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 33,
+              "Title": "IInputStrategy.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Interfaces\\IInputStrategy.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Interfaces\\IInputStrategy.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Interfaces\\IInputStrategy.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Interfaces\\IInputStrategy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T12:46:18.882Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "IInputHandler.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Interfaces\\IInputHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Interfaces\\IInputHandler.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Interfaces\\IInputHandler.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Interfaces\\IInputHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T12:46:17.635Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Interfaces\\IAuthService.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Interfaces\\IAuthService.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Interfaces\\IAuthService.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Interfaces\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T15:32:44.464Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
               "Title": "LeaderboardItem.cs",
               "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\UI\\LeaderboardItem.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\LeaderboardItem.cs",
@@ -365,27 +756,207 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "PlayerController.cs",
-              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Player\\PlayerController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\Player\\PlayerController.cs",
-              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Player\\PlayerController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\Player\\PlayerController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBAAAAAfAAAAAAAAAA==",
+              "DocumentIndex": 43,
+              "Title": "LeaderboardWindow.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\UI\\LeaderboardWindow.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\LeaderboardWindow.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\UI\\LeaderboardWindow.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\LeaderboardWindow.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T15:14:07.001Z"
+              "WhenOpened": "2026-02-28T18:29:03.574Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "LeaderboardEntry.cs",
-              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Leaderboard\\LeaderboardEntry.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Leaderboard\\LeaderboardEntry.cs",
-              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Leaderboard\\LeaderboardEntry.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Leaderboard\\LeaderboardEntry.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAbAAAAAAAAAA==",
+              "DocumentIndex": 44,
+              "Title": "ScoreManager.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\ScoreManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ScoreManager.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\ScoreManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ScoreManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T15:22:58.694Z"
+              "WhenOpened": "2026-03-04T10:55:17.378Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "FirebaseLeaderboardService.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Leaderboard\\FirebaseLeaderboardService.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Leaderboard\\FirebaseLeaderboardService.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Leaderboard\\FirebaseLeaderboardService.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Leaderboard\\FirebaseLeaderboardService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T15:26:34.584Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "MainMenuWindow.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\UI\\MainMenuWindow.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\MainMenuWindow.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\UI\\MainMenuWindow.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\MainMenuWindow.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T19:48:54.206Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "GameInstaller.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Core\\DI\\GameInstaller.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Core\\DI\\GameInstaller.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Core\\DI\\GameInstaller.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Core\\DI\\GameInstaller.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T20:00:54.968Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "ManagersInstaller.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Core\\DI\\ManagersInstaller.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Core\\DI\\ManagersInstaller.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Core\\DI\\ManagersInstaller.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Core\\DI\\ManagersInstaller.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T11:49:29.334Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "LeaderboardInstaller.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Core\\DI\\LeaderboardInstaller.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Core\\DI\\LeaderboardInstaller.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Core\\DI\\LeaderboardInstaller.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Core\\DI\\LeaderboardInstaller.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T12:02:17.775Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "InputInstaller.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Core\\DI\\InputInstaller.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Core\\DI\\InputInstaller.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Core\\DI\\InputInstaller.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Core\\DI\\InputInstaller.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T11:47:36.538Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "ObstaclesInstaller.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Core\\DI\\ObstaclesInstaller.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Core\\DI\\ObstaclesInstaller.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Core\\DI\\ObstaclesInstaller.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Core\\DI\\ObstaclesInstaller.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T11:49:10.852Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "SignalsInstaller.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Core\\DI\\SignalsInstaller.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Core\\DI\\SignalsInstaller.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Core\\DI\\SignalsInstaller.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Core\\DI\\SignalsInstaller.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T11:47:17.016Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "ConfigsInstaller.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Core\\DI\\ConfigsInstaller.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Core\\DI\\ConfigsInstaller.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Core\\DI\\ConfigsInstaller.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Core\\DI\\ConfigsInstaller.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T11:46:46.678Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "AuthInstaller.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Core\\DI\\AuthInstaller.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Core\\DI\\AuthInstaller.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Core\\DI\\AuthInstaller.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Core\\DI\\AuthInstaller.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T11:47:44.652Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "AuthData.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Auth\\AuthData.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Auth\\AuthData.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Auth\\AuthData.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Auth\\AuthData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T10:46:56.407Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "SlidingState.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Player\\States\\SlidingState.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\Player\\States\\SlidingState.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Player\\States\\SlidingState.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\Player\\States\\SlidingState.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAowCEAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T11:38:14.631Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "RunningState.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Player\\States\\RunningState.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\Player\\States\\RunningState.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Player\\States\\RunningState.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\Player\\States\\RunningState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T11:38:38.093Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "JumpingState.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Player\\States\\JumpingState.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\Player\\States\\JumpingState.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Player\\States\\JumpingState.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\Player\\States\\JumpingState.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBoAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T11:38:44.056Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "ObstacleManipulator.cs",
+              "DocumentMoniker": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Environment\\ObstacleManipulator.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\Environment\\ObstacleManipulator.cs",
+              "ToolTip": "D:\\TestTasks\\RunnerGameUnity\\Assets\\Scripts\\Gameplay\\Environment\\ObstacleManipulator.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\Environment\\ObstacleManipulator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T01:28:01.566Z"
             }
           ]
         }

@@ -4,33 +4,42 @@ using Zenject;
 
 public class ObstacleSpawner : MonoBehaviour
 {
-    [Inject] private ObstaclePool _obstaclePool;
-    [Inject] private ObstacleSpawnConfig _config;
-    [Inject] private ObstacleManipulator _obstacleMover;
-    [Inject] private SpeedManager _speedManager;
-    [Inject] private GameConfig _gameConfig;
+    private ObstaclePool _obstaclePool;
+    private ObstacleSpawnConfig _config;
+    private ObstacleManipulator _obstacleMover;
+    private SpeedManager _speedManager;
+    private GameConfig _gameConfig;
 
     private float _nextSpawnTime;
     private float _currentSpawnInterval;
 
+    [Inject]
+    public void Construct(
+        ObstaclePool obstaclePool,
+        ObstacleSpawnConfig obstacleSpawnConfig,
+        ObstacleManipulator obstacleManipulator,
+        SpeedManager speedManager,
+        GameConfig gameConfig)
+    {
+        _obstaclePool = obstaclePool;
+        _config = obstacleSpawnConfig;
+        _obstacleMover = obstacleManipulator;
+        _speedManager = speedManager;
+        _gameConfig = gameConfig;
+    }
     private void Start()
     {
         enabled = false;
-        _nextSpawnTime = Time.time + _config.initialSafeZone;
+        _nextSpawnTime = Time.time + _config.InitialSafeZone;
     }
 
     private void Update()
     {
         if (!enabled) return;
 
-        float speedFactor = _speedManager.CurrentSpeed / _gameConfig.initialSpeed;
+        float speedFactor = _speedManager.CurrentSpeed / _gameConfig.InitialSpeed;
 
-        _currentSpawnInterval = Mathf.Max(_config.baseSpawnInterval / speedFactor, _config.minSpawnInterval);
-
-        Debug.Log(_gameConfig.initialSpeed);
-        Debug.Log(_speedManager.CurrentSpeed);
-
-        Debug.Log($"[Spawner] Time: {Time.time}, nextSpawn: {_nextSpawnTime}, interval: {_currentSpawnInterval}, speedFactor: {speedFactor}");
+        _currentSpawnInterval = Mathf.Max(_config.BaseSpawnInterval / speedFactor, _config.MinSpawnInterval);
 
         if (Time.time >= _nextSpawnTime)
         {
@@ -42,7 +51,7 @@ public class ObstacleSpawner : MonoBehaviour
     private void SpawnObstacle()
     {
         ObstacleType type = _config.GetRandomType();
-        float x = Random.Range(-1, 2) * _config.laneWidth;
+        float x = Random.Range(-1, 2) * _config.LaneWidth;
         Vector3 spawnPos = new Vector3(x, 0, 20f);
 
         Obstacle obstacle = _obstaclePool.Get(type, spawnPos);
@@ -65,6 +74,6 @@ public class ObstacleSpawner : MonoBehaviour
 
     public void ResetSpawner()
     {
-        _nextSpawnTime = Time.time + _config.initialSafeZone;
+        _nextSpawnTime = Time.time + _config.InitialSafeZone;
     }
 }

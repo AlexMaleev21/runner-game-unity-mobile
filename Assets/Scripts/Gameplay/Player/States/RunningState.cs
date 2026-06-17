@@ -16,7 +16,7 @@ public class RunningState : IPlayerState
     public void Enter()
     {
         _player.SetAnimation("Running", true);
-        _player.SetColliderHeight(_config.normalHeight);
+        _player.SetColliderHeight(_config.NormalHeight);
     }
 
     public void Update()
