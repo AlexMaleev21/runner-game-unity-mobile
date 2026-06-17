@@ -853,7 +853,6 @@ Transform:
   - {fileID: 719342492}
   - {fileID: 1622396590}
   - {fileID: 1009083332}
-  - {fileID: 1978691796}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &832575517
@@ -1477,10 +1476,9 @@ MonoBehaviour:
   - {fileID: 173894225}
   - {fileID: 1696851524}
   - {fileID: 461654888}
+  - {fileID: 1698445343}
   - {fileID: 1009083333}
   - {fileID: 1622396591}
-  - {fileID: 1978691797}
-  - {fileID: 1698445343}
   _installerPrefabs: []
   _autoRun: 1
   OnPreInstall:
@@ -2052,51 +2050,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1978691795
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1978691796}
-  - component: {fileID: 1978691797}
-  m_Layer: 0
-  m_Name: CoinInstaller
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1978691796
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1978691795}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 798636153}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1978691797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1978691795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75b47f26e2200b54380aed37543b1123, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CoinInstaller
-  _coinSpawnConfig: {fileID: 11400000, guid: ef56564cdb4a687408afc85914d32fee, type: 2}
 --- !u!1 &2134186161
 GameObject:
   m_ObjectHideFlags: 0

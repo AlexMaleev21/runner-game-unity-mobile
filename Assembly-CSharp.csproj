@@ -66,7 +66,6 @@
     <Compile Include="Assets\Scripts\Core\DI\AdsInstaller.cs" />
     <Compile Include="Assets\Scripts\Core\DI\AuthInstaller.cs" />
     <Compile Include="Assets\Scripts\Core\DI\GameInstaller.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Environment\Colectibles\CoinSpawner.cs" />
     <Compile Include="Assets\Scripts\ScoreManager.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IAuthService.cs" />
     <Compile Include="Assets\Scripts\InputStrategy\InputHandler.cs" />
@@ -75,14 +74,12 @@
     <Compile Include="Assets\Scripts\Auth\FirebaseAuthService.cs" />
     <Compile Include="Assets\Scripts\Core\DI\InputInstaller.cs" />
     <Compile Include="Assets\Scripts\GameManagement\MenuManager.cs" />
-    <Compile Include="Assets\Scripts\Core\DI\CoinInstaller.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IPlayerState.cs" />
     <Compile Include="Assets\Scripts\UI\GameOverWindow.cs" />
     <Compile Include="Assets\Scripts\Leaderboard\LeaderboardEntry.cs" />
     <Compile Include="Assets\Scripts\Auth\AuthWindow.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\States\SlidingState.cs" />
     <Compile Include="Assets\Scripts\UI\InGameUI.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Environment\Colectibles\CoinFactory.cs" />
     <Compile Include="Assets\Scripts\Configs\GameConfig.cs" />
     <Compile Include="Assets\Scripts\UI\LeaderboardItem.cs" />
     <Compile Include="Assets\Scripts\Leaderboard\FirebaseLeaderboardService.cs" />
@@ -94,7 +91,6 @@
     <Compile Include="Assets\Scripts\Gameplay\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Core\DI\LeaderboardInstaller.cs" />
     <Compile Include="Assets\Scripts\InputStrategy\MobileInputStrategy.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Environment\Colectibles\Coin.cs" />
     <Compile Include="Assets\Scripts\Core\DI\ManagersInstaller.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Environment\Obstacles\SwerveObstacle.cs" />
     <Compile Include="Assets\Scripts\GameManagement\AdsManager.cs" />
@@ -107,17 +103,14 @@
     <Compile Include="Assets\Scripts\Core\DI\ObstaclesInstaller.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\States\DeadState.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\States\JumpingState.cs" />
-    <Compile Include="Assets\Scripts\Configs\CoinConfig.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Environment\Colectibles\CoinManager.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\PlayerStateMachine.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IInputHandler.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Environment\Obstacles\SlideObstacle.cs" />
     <Compile Include="Assets\Scripts\Core\DI\UIInstaller.cs" />
     <Compile Include="Assets\Scripts\GameManagement\AuthManager.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Environment\Colectibles\CoinPool.cs" />
     <Compile Include="Assets\Scripts\Configs\PlayerConfig.cs" />
-    <Compile Include="Assets\Scripts\Core\DI\PlayerInstaller.cs" />
     <Compile Include="Assets\Scripts\Core\DI\ConfigsInstaller.cs" />
+    <Compile Include="Assets\Scripts\Core\DI\PlayerInstaller.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\States\IdleState.cs" />
     <Compile Include="Assets\Scripts\Core\DI\SignalsInstaller.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Player\States\RunningState.cs" />
@@ -125,7 +118,6 @@
     <Compile Include="Assets\Scripts\Ads\AdMobAdsService.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IInputStrategy.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Environment\Obstacles\Obstacle.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\Environment\Colectibles\CoinMover.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IObstacleFactory.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenuWindow.cs" />
   </ItemGroup>

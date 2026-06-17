@@ -31,7 +31,6 @@ public class GameStateController : IInitializable, IDisposable
 
     public void Initialize()
     {
-        Application.targetFrameRate = 60;
         _signalBus.Subscribe<PlayerDiedSignal>(OnPlayerDied);
         _signalBus.Subscribe<AuthSuccessSignal>(OnAuthSuccess);
         _signalBus.Subscribe<GameResumedSignal>(OnGameResumed);
