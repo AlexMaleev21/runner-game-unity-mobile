@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using Zenject;
 using Zenject.SpaceFighter;
@@ -16,8 +15,8 @@ public class PlayerController : MonoBehaviour
     private Animator _animator;
     private int _currentLane = 0;
     private float _targetX;
+    private float _baseY;
     private bool _isDead = false;
-    private Vector3 _startPosition;
 
     public PlayerStateMachine StateMachine => _stateMachine;
 
@@ -39,7 +38,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         _rigidbody = GetComponentInChildren<Rigidbody>();
-        _playerCollider = GetComponent<Collider>();
+        _playerCollider = GetComponentInChildren<Collider>();
         _animator = GetComponentInChildren<Animator>();
     }
 
@@ -47,7 +46,7 @@ public class PlayerController : MonoBehaviour
     {
         _stateMachine.ChangeState(PlayerStateType.Idle);
         transform.position = _playerSpawnPoint.position;
-        _startPosition = transform.position;
+        _baseY = transform.position.y;
         _inputHandler.OnInput += HandleInput;
     }
 
@@ -88,11 +87,6 @@ public class PlayerController : MonoBehaviour
                     _stateMachine.ChangeState(PlayerStateType.Jumping);
                 }
                 break;
-
-            case InputAction.Slide:
-                if (_stateMachine.CurrentState.StateType == PlayerStateType.Running)
-                    _stateMachine.ChangeState(PlayerStateType.Sliding);
-                break;
         }
     }
 
@@ -103,6 +97,9 @@ public class PlayerController : MonoBehaviour
 
     public float GetAnimationDuration(string clipName)
     {
+        if (_animator == null)
+            return 0f;
+
         AnimatorStateInfo stateInfo = _animator.GetCurrentAnimatorStateInfo(0);
         float duration = stateInfo.length;
         return duration;
@@ -128,6 +125,29 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void BeginJump()
+    {
+        _baseY = transform.position.y;
+        ResetPhysicsVelocity();
+    }
+
+    public void SetJumpProgress(float normalizedProgress)
+    {
+        float clampedProgress = Mathf.Clamp01(normalizedProgress);
+        float jumpOffset = Mathf.Sin(clampedProgress * Mathf.PI) * _config.JumpHeight;
+        Vector3 position = transform.position;
+        position.y = _baseY + jumpOffset;
+        transform.position = position;
+    }
+
+    public void EndJump()
+    {
+        ResetPhysicsVelocity();
+        Vector3 position = transform.position;
+        position.y = _baseY;
+        transform.position = position;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Obstacle") && !_isDead && enabled)
@@ -149,7 +169,11 @@ public class PlayerController : MonoBehaviour
     }
     public void OnPlayerDied()
     {
-        _rigidbody.isKinematic = true;
+        if (_rigidbody != null)
+        {
+            ResetPhysicsVelocity();
+            _rigidbody.isKinematic = true;
+        }
     }
 
     public void SetEnabled(bool enabled)
@@ -171,10 +195,28 @@ public class PlayerController : MonoBehaviour
     public void ResetToStart()
     {
         transform.position = _playerSpawnPoint.position;
+        _baseY = transform.position.y;
         _currentLane = 0;
         _targetX = 0;
         _isDead = false;
-        _rigidbody.isKinematic = false;
+        if (_rigidbody != null)
+        {
+            ResetPhysicsVelocity();
+            _rigidbody.isKinematic = false;
+        }
+    }
+
+    private void ResetPhysicsVelocity()
+    {
+        if (_rigidbody == null)
+            return;
+
+#if UNITY_6000_0_OR_NEWER
+        _rigidbody.linearVelocity = Vector3.zero;
+#else
+        _rigidbody.velocity = Vector3.zero;
+#endif
+        _rigidbody.angularVelocity = Vector3.zero;
     }
 
     private void OnDestroy()

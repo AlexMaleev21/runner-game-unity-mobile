@@ -4,7 +4,6 @@ public class JumpingState : IPlayerState
 {
     private readonly PlayerController _player;
     private readonly PlayerConfig _config;
-    private Rigidbody _rigidbody;
     private float _jumpTime;
     public PlayerStateType StateType => PlayerStateType.Jumping;
 
@@ -12,19 +11,23 @@ public class JumpingState : IPlayerState
     {
         _player = player;
         _config = config;
-        _rigidbody = player.GetComponentInChildren<Rigidbody>();
     }
 
     public void Enter()
     {
         _player.SetAnimationTrigger("Jump");
-        _rigidbody.AddForce(Vector3.up * _config.JumpForce, ForceMode.Impulse);
+        _player.BeginJump();
         _jumpTime = Time.time;
     }
 
     public void Update()
     {
-        if (Time.time > _jumpTime + _config.JumpDuration)
+        float jumpDuration = Mathf.Max(_config.JumpDuration, 0.01f);
+        float progress = (Time.time - _jumpTime) / jumpDuration;
+
+        _player.SetJumpProgress(progress);
+
+        if (progress >= 1f)
         {
             _player.StateMachine.ChangeState(PlayerStateType.Running);
         }
@@ -32,6 +35,6 @@ public class JumpingState : IPlayerState
 
     public void Exit()
     {
-
+        _player.EndJump();
     }
 }

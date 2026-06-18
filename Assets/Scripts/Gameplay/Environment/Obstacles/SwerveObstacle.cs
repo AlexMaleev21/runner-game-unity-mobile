@@ -3,14 +3,15 @@ using UnityEngine;
 public class SwerveObstacle : Obstacle
 {
 
-    private void Start()
+    private void Awake()
     {
-        _type = ObstacleType.SwerveObstacle;
+        _type = ObstacleType.Planet;
     }
 
     protected override void OnTriggerEnter(Collider other)
     {
         PlayerController player = other.GetComponentInParent<PlayerController>();
-        player.Die();
+        if (player != null)
+            player.Die();
     }
 }

@@ -1,14 +1,16 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
 public class ObstacleSpawner : MonoBehaviour
 {
+    private readonly List<int> _laneBuffer = new List<int> { -1, 0, 1 };
+
     private ObstaclePool _obstaclePool;
     private ObstacleSpawnConfig _config;
     private ObstacleManipulator _obstacleMover;
-    private SpeedManager _speedManager;
-    private GameConfig _gameConfig;
+    private PlayerConfig _playerConfig;
 
     private float _nextSpawnTime;
     private float _currentSpawnInterval;
@@ -18,14 +20,12 @@ public class ObstacleSpawner : MonoBehaviour
         ObstaclePool obstaclePool,
         ObstacleSpawnConfig obstacleSpawnConfig,
         ObstacleManipulator obstacleManipulator,
-        SpeedManager speedManager,
-        GameConfig gameConfig)
+        PlayerConfig playerConfig)
     {
         _obstaclePool = obstaclePool;
         _config = obstacleSpawnConfig;
         _obstacleMover = obstacleManipulator;
-        _speedManager = speedManager;
-        _gameConfig = gameConfig;
+        _playerConfig = playerConfig;
     }
     private void Start()
     {
@@ -37,27 +37,40 @@ public class ObstacleSpawner : MonoBehaviour
     {
         if (!enabled) return;
 
-        float speedFactor = _speedManager.CurrentSpeed / _gameConfig.InitialSpeed;
-
-        _currentSpawnInterval = Mathf.Max(_config.BaseSpawnInterval / speedFactor, _config.MinSpawnInterval);
+        float safeJumpInterval = _playerConfig.JumpDuration + _config.PostJumpSafetyTime;
+        _currentSpawnInterval = Mathf.Max(_config.BaseSpawnInterval, _config.MinSpawnInterval, safeJumpInterval);
 
         if (Time.time >= _nextSpawnTime)
         {
-            SpawnObstacle();
-            //_nextSpawnTime = Time.time + _currentSpawnInterval;
+            SpawnObstacleRow();
         }
     }
 
-    private void SpawnObstacle()
+    private void SpawnObstacleRow()
     {
-        ObstacleType type = _config.GetRandomType();
-        float x = Random.Range(-1, 2) * _config.LaneWidth;
-        Vector3 spawnPos = new Vector3(x, 0, 20f);
+        int obstacleCount = Random.Range(_config.MinObstaclesPerRow, _config.MaxObstaclesPerRow + 1);
+        ShuffleLanes();
 
-        Obstacle obstacle = _obstaclePool.Get(type, spawnPos);
-        _obstacleMover.RegisterObstacle(obstacle);
+        for (int i = 0; i < obstacleCount; i++)
+        {
+            int lane = _laneBuffer[i];
+            Vector3 spawnPos = new Vector3(lane * _config.LaneWidth, _config.ObstacleY, _config.SpawnZ);
+            Obstacle obstacle = _obstaclePool.Get(_config.ObstacleType, spawnPos);
+
+            if (obstacle != null)
+                _obstacleMover.RegisterObstacle(obstacle);
+        }
 
         _nextSpawnTime = Time.time + _currentSpawnInterval;
+    }
+
+    private void ShuffleLanes()
+    {
+        for (int i = 0; i < _laneBuffer.Count; i++)
+        {
+            int randomIndex = Random.Range(i, _laneBuffer.Count);
+            (_laneBuffer[i], _laneBuffer[randomIndex]) = (_laneBuffer[randomIndex], _laneBuffer[i]);
+        }
     }
 
     public void PauseSpawn(float duration)

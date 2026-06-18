@@ -17,7 +17,7 @@ public class ObstacleFactory : IObstacleFactory
         GameObject prefab = _config.GetPrefab(type);
         if (prefab == null)
         {
-            Debug.LogError($"No prefab found for obstacle type {type}");
+            Debug.LogError("No planet obstacle prefab assigned in ObstacleSpawnConfig.");
             return null;
         }
 

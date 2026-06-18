@@ -40,8 +40,6 @@ public class MobileInputStrategy : IInputStrategy
                             {
                                 if (swipeDelta.y > 0)
                                     OnInputPerformed?.Invoke(InputAction.Jump);
-                                else
-                                    OnInputPerformed?.Invoke(InputAction.Slide);
                             }
                         }
                         else

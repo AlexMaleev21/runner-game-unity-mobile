@@ -16,11 +16,7 @@ public class EditorInputStrategy : IInputStrategy
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space))
         {
             OnInputPerformed?.Invoke(InputAction.Jump);
-            Debug.Log("ww");
         }
-
-        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
-            OnInputPerformed?.Invoke(InputAction.Slide);
 
         if (Input.GetMouseButtonDown(0))
             OnInputPerformed?.Invoke(InputAction.Tap);

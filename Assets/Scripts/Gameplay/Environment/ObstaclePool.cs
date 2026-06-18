@@ -15,23 +15,24 @@ public class ObstaclePool
         _config = config;
 
         _poolParent = new GameObject("ObstaclePool").transform;
+        _pools[_config.ObstacleType] = new Queue<Obstacle>();
 
-        foreach (var typeData in _config.obstacleTypes)
+        for (int i = 0; i < _config.ObstaclePoolSize; i++)
         {
-            _pools[typeData.type] = new Queue<Obstacle>();
+            var obstacle = _factory.Create(_config.ObstacleType, Vector3.zero);
+            if (obstacle == null)
+                continue;
 
-            for (int i = 0; i < _config.ObstaclePoolSize; i++)
-            {
-                var obstacle = _factory.Create(typeData.type, Vector3.zero);
-                obstacle.transform.SetParent(_poolParent);
-                obstacle.OnDespawn();
-                _pools[typeData.type].Enqueue(obstacle);
-            }
+            obstacle.transform.SetParent(_poolParent);
+            obstacle.OnDespawn();
+            _pools[_config.ObstacleType].Enqueue(obstacle);
         }
     }
 
     public Obstacle Get(ObstacleType type, Vector3 position)
     {
+        type = _config.ObstacleType;
+
         if (_pools[type].Count > 0)
         {
             var obstacle = _pools[type].Dequeue();
@@ -42,6 +43,9 @@ public class ObstaclePool
         else
         {
             var obstacle = _factory.Create(type, position);
+            if (obstacle == null)
+                return null;
+
             obstacle.transform.SetParent(_poolParent);
             obstacle.OnSpawn();
             return obstacle;
@@ -50,8 +54,11 @@ public class ObstaclePool
 
     public void Return(Obstacle obstacle)
     {
+        if (obstacle == null)
+            return;
+
         obstacle.OnDespawn();
         obstacle.transform.SetParent(_poolParent);
-        _pools[obstacle.Type].Enqueue(obstacle);
+        _pools[_config.ObstacleType].Enqueue(obstacle);
     }
 }
