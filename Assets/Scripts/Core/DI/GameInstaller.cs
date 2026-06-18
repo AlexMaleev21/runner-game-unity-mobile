@@ -7,12 +7,12 @@ public class GameInstaller : MonoInstaller
     [Header("Configs")]
     [SerializeField] private PlayerConfig _playerConfig;
     [SerializeField] private ObstacleSpawnConfig _obstacleSpawnConfig;
+    [SerializeField] private CoinSpawnConfig _coinSpawnConfig;
     [SerializeField] private GameConfig _gameConfig;
 
     [Header("Prefabs")]
     [SerializeField] private PlayerController _playerPrefab;
     [SerializeField] private Transform _playerSpawnPoint;
-    [SerializeField] private GameObject _authWindowPrefab;
     [SerializeField] private GameObject _mainMenuWindowPrefab;
     [SerializeField] private GameObject _gameOverWindowPrefab;
     [SerializeField] private GameObject _leaderboardWindowPrefab;
@@ -23,7 +23,6 @@ public class GameInstaller : MonoInstaller
         InstallConfigs();
         InstallSignals();
         InstallInput();
-        InstallAuth();
         InstallAds();
         InstallLeaderboard();
         InstallPlayer();
@@ -36,6 +35,9 @@ public class GameInstaller : MonoInstaller
     {
         Container.BindInstance(_playerConfig);
         Container.BindInstance(_obstacleSpawnConfig);
+        Container.BindInstance(_coinSpawnConfig != null
+            ? _coinSpawnConfig
+            : Resources.Load<CoinSpawnConfig>("Configs/CoinSpawnConfig"));
         Container.BindInstance(_gameConfig);
     }
 
@@ -44,7 +46,7 @@ public class GameInstaller : MonoInstaller
         SignalBusInstaller.Install(Container);
         Container.DeclareSignal<PlayerDiedSignal>();
         Container.DeclareSignal<ScoreUpdatedSignal>();
-        Container.DeclareSignal<AuthSuccessSignal>();
+        Container.DeclareSignal<GameResumedSignal>();
     }
 
     private void InstallInput()
@@ -55,11 +57,6 @@ public class GameInstaller : MonoInstaller
         Container.Bind<IInputStrategy>().To<MobileInputStrategy>().AsSingle();
 #endif
         Container.BindInterfacesTo<InputHandler>().AsSingle();
-    }
-
-    private void InstallAuth()
-    {
-        Container.Bind<IAuthService>().To<FirebaseAuthService>().AsSingle();
     }
 
     private void InstallAds()
@@ -92,6 +89,9 @@ public class GameInstaller : MonoInstaller
         Container.Bind<IObstacleFactory>().To<ObstacleFactory>().AsSingle();
         Container.Bind<ObstaclePool>().AsSingle();
         Container.Bind<ObstacleManipulator>().FromNewComponentOnNewGameObject().AsSingle().NonLazy();
+        Container.Bind<CoinPool>().AsSingle();
+        Container.Bind<CoinManipulator>().FromNewComponentOnNewGameObject().AsSingle().NonLazy();
+        Container.Bind<CoinSpawner>().AsSingle();
         Container.Bind<ObstacleSpawner>().FromNewComponentOnNewGameObject().AsSingle().NonLazy();
     }
 
@@ -99,21 +99,16 @@ public class GameInstaller : MonoInstaller
     {
         Container.BindInterfacesAndSelfTo<SpeedManager>().AsSingle();
         Container.BindInterfacesAndSelfTo<ScoreManager>().AsSingle();
-        Container.BindInterfacesAndSelfTo<AuthManager>().AsSingle();
+        Container.Bind<PlayerProfileService>().AsSingle();
         Container.BindInterfacesAndSelfTo<AdsManager>().AsSingle();
         Container.BindInterfacesAndSelfTo<MenuManager>().AsSingle();
         Container.BindInterfacesAndSelfTo<GameplayManager>().AsSingle();
         Container.BindInterfacesTo<GameStateController>().AsSingle();
+        Container.Bind<NicknamePromptWindow>().FromNewComponentOnNewGameObject().AsSingle().NonLazy();
     }
 
     private void InstallUI()
     {
-        Container.Bind<AuthWindow>()
-            .FromComponentInNewPrefab(_authWindowPrefab)
-            .UnderTransformGroup("UI")
-            .AsSingle()
-            .NonLazy();
-
         Container.Bind<MainMenuWindow>()
             .FromComponentInNewPrefab(_mainMenuWindowPrefab)
             .UnderTransformGroup("UI")

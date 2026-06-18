@@ -270,3 +270,99 @@ Received Import Request.
 Start importing Assets/Scripts/Auth/AuthData.cs using Guid(b6b777bf136d4f042b6b83c83cb066df) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'aeab2b0173121fcb009596cd210838ca') in 0.0005826 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
+========================================================================
+Received Import Request.
+  Time since last request: 1500.608150 seconds.
+  path: Assets/Scripts/Gameplay/Environment/Coins
+  artifactKey: Guid(9ae20c2abf4c71e418fe148f75235922) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Scripts/Gameplay/Environment/Coins using Guid(9ae20c2abf4c71e418fe148f75235922) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'e0c154fa0e24a90eccbc6025b35f1127') in 0.0109581 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 4.60 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7184 unused Assets / (4.1 MB). Loaded Objects now: 8010.
+Memory consumption went from 149.5 MB to 145.4 MB.
+Total: 16.562000 ms (FindLiveObjects: 1.080900 ms CreateObjectMapping: 0.909800 ms MarkObjects: 12.415500 ms  DeleteObjects: 2.154700 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 14.960382 seconds.
+  path: Assets/Scripts/Configs/CoinSpawnConfig.cs
+  artifactKey: Guid(1ad586764eeb06d44881f4b80272a454) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Scripts/Configs/CoinSpawnConfig.cs using Guid(1ad586764eeb06d44881f4b80272a454) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'a1dcbf2c7d5a1003383bfd0c0c3b332c') in 0.0121988 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Scripts/Gameplay/Environment/Coins/CoinPool.cs
+  artifactKey: Guid(5a4e1ab6ef73af34b9679daf7217a260) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Scripts/Gameplay/Environment/Coins/CoinPool.cs using Guid(5a4e1ab6ef73af34b9679daf7217a260) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'b910cd61d32444094a0415fa526ec958') in 0.0090142 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Scripts/Gameplay/Environment/Coins/Coin.cs
+  artifactKey: Guid(e9f5164f5c04e3a4085c8d9aa2266702) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Scripts/Gameplay/Environment/Coins/Coin.cs using Guid(e9f5164f5c04e3a4085c8d9aa2266702) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '788e2e00c62c8cf8209606b04531fc69') in 0.0097399 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 4.53 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7184 unused Assets / (4.8 MB). Loaded Objects now: 8010.
+Memory consumption went from 149.5 MB to 144.7 MB.
+Total: 13.741500 ms (FindLiveObjects: 1.112800 ms CreateObjectMapping: 0.958300 ms MarkObjects: 8.110400 ms  DeleteObjects: 3.558900 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 92.568887 seconds.
+  path: Assets/Scripts/Gameplay/Environment/Coins/CoinSpawner.cs
+  artifactKey: Guid(e2b2d49f569a4f2ca7b8eaaad21c009a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Scripts/Gameplay/Environment/Coins/CoinSpawner.cs using Guid(e2b2d49f569a4f2ca7b8eaaad21c009a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'beac1388bb5af47b04d082c43303f971') in 0.0173756 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Scripts/Gameplay/Environment/Coins/Coin.cs
+  artifactKey: Guid(d4e0b283b1124d0d9a9f10c34b893021) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Scripts/Gameplay/Environment/Coins/Coin.cs using Guid(d4e0b283b1124d0d9a9f10c34b893021) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '908c83bb1aecfc96fb193f728d89aff7') in 0.0119945 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Scripts/Configs/CoinSpawnConfig.cs
+  artifactKey: Guid(f1e0c3a6e7e64d9aa2d54f6b25391c0a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Scripts/Configs/CoinSpawnConfig.cs using Guid(f1e0c3a6e7e64d9aa2d54f6b25391c0a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '21b1d3287febe72208402c057cb3ea3b') in 0.0115958 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Resources/Configs/CoinSpawnConfig.asset
+  artifactKey: Guid(7f9d667d2694445d9c8a0896db38da43) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Resources/Configs/CoinSpawnConfig.asset using Guid(7f9d667d2694445d9c8a0896db38da43) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'a00a69738f3bf274dbccbd1ff580906b') in 0.0120541 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Resources/Configs
+  artifactKey: Guid(a17efb8505ea43b7b7cbcd0efa8c5d92) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Resources/Configs using Guid(a17efb8505ea43b7b7cbcd0efa8c5d92) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '4a2505ba1db8238fe16a03b8bec5a729') in 0.010324 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

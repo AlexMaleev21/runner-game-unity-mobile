@@ -6,10 +6,12 @@ using Zenject;
 public class ObstacleSpawner : MonoBehaviour
 {
     private readonly List<int> _laneBuffer = new List<int> { -1, 0, 1 };
+    private readonly List<int> _occupiedObstacleLanes = new List<int>(3);
 
     private ObstaclePool _obstaclePool;
     private ObstacleSpawnConfig _config;
     private ObstacleManipulator _obstacleMover;
+    private CoinSpawner _coinSpawner;
     private PlayerConfig _playerConfig;
 
     private float _nextSpawnTime;
@@ -20,11 +22,13 @@ public class ObstacleSpawner : MonoBehaviour
         ObstaclePool obstaclePool,
         ObstacleSpawnConfig obstacleSpawnConfig,
         ObstacleManipulator obstacleManipulator,
+        CoinSpawner coinSpawner,
         PlayerConfig playerConfig)
     {
         _obstaclePool = obstaclePool;
         _config = obstacleSpawnConfig;
         _obstacleMover = obstacleManipulator;
+        _coinSpawner = coinSpawner;
         _playerConfig = playerConfig;
     }
     private void Start()
@@ -50,10 +54,13 @@ public class ObstacleSpawner : MonoBehaviour
     {
         int obstacleCount = Random.Range(_config.MinObstaclesPerRow, _config.MaxObstaclesPerRow + 1);
         ShuffleLanes();
+        _occupiedObstacleLanes.Clear();
 
         for (int i = 0; i < obstacleCount; i++)
         {
             int lane = _laneBuffer[i];
+            _occupiedObstacleLanes.Add(lane);
+
             Vector3 spawnPos = new Vector3(lane * _config.LaneWidth, _config.ObstacleY, _config.SpawnZ);
             Obstacle obstacle = _obstaclePool.Get(_config.ObstacleType, spawnPos);
 
@@ -61,6 +68,7 @@ public class ObstacleSpawner : MonoBehaviour
                 _obstacleMover.RegisterObstacle(obstacle);
         }
 
+        _coinSpawner.SpawnCoinRow(_occupiedObstacleLanes, _config.SpawnZ);
         _nextSpawnTime = Time.time + _currentSpawnInterval;
     }
 

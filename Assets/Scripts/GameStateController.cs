@@ -3,12 +3,13 @@ using UnityEngine;
 using Zenject;
 using Zenject.SpaceFighter;
 
-public enum GameState { Auth, Menu, Playing, GameOver }
+public enum GameState { Nickname, Menu, Playing, GameOver }
 
 public class GameStateController : IInitializable, IDisposable
 {
     private readonly SignalBus _signalBus;
-    private readonly AuthManager _authManager;
+    private readonly NicknamePromptWindow _nicknamePromptWindow;
+    private readonly ILeaderboardService _leaderboardService;
     private readonly MenuManager _menuManager;
     private readonly GameplayManager _gameplayManager;
     private readonly BackgroundMover _backgroundMover;
@@ -17,13 +18,15 @@ public class GameStateController : IInitializable, IDisposable
 
     public GameStateController(
         SignalBus signalBus,
-        AuthManager authManager,
+        NicknamePromptWindow nicknamePromptWindow,
+        ILeaderboardService leaderboardService,
         MenuManager menuManager,
         GameplayManager gameplayManager,
         BackgroundMover backgroundMover)
     {
         _signalBus = signalBus;
-        _authManager = authManager;
+        _nicknamePromptWindow = nicknamePromptWindow;
+        _leaderboardService = leaderboardService;
         _menuManager = menuManager;
         _gameplayManager = gameplayManager;
         _backgroundMover = backgroundMover;
@@ -32,45 +35,27 @@ public class GameStateController : IInitializable, IDisposable
     public void Initialize()
     {
         _signalBus.Subscribe<PlayerDiedSignal>(OnPlayerDied);
-        _signalBus.Subscribe<AuthSuccessSignal>(OnAuthSuccess);
         _signalBus.Subscribe<GameResumedSignal>(OnGameResumed);
 
         _menuManager.OnStartGameRequested += StartGame;
-        _menuManager.OnLogoutRequested += Logout;
 
         _gameplayManager.OnRestartRequested += RestartGame;
         _gameplayManager.OnExitToMenuRequested += HandleExitToMenu;
 
-        CheckAutoLogin();
+        ShowNicknamePrompt();
     }
 
-    private async void CheckAutoLogin()
+    private void ShowNicknamePrompt()
     {
-        _currentState = GameState.Auth;
-        bool autoLoginSuccess = await _authManager.AutoLogin();
-        if (autoLoginSuccess)
-        {
-            OnAuthSuccess();
-        }
-        else
-        {
-            _authManager.ShowAuth();
-        }
+        _currentState = GameState.Nickname;
+        _nicknamePromptWindow.Show(ShowMenu);
     }
 
-    private void OnAuthSuccess()
+    private async void ShowMenu()
     {
-        _authManager.HideAuth();
+        await _leaderboardService.RegisterNickname();
         _currentState = GameState.Menu;
         _menuManager.ShowMenu();
-    }
-
-    private void Logout()
-    {
-        _authManager.Logout();
-        _menuManager.HideMenu();
-        _currentState = GameState.Auth;
-        _authManager.ShowAuth();
     }
 
     private void StartGame()
@@ -107,10 +92,9 @@ public class GameStateController : IInitializable, IDisposable
     public void Dispose()
     {
         _signalBus?.Unsubscribe<PlayerDiedSignal>(OnPlayerDied);
-        _signalBus?.Unsubscribe<AuthSuccessSignal>(OnAuthSuccess);
+        _signalBus?.Unsubscribe<GameResumedSignal>(OnGameResumed);
 
         _menuManager.OnStartGameRequested -= StartGame;
-        _menuManager.OnLogoutRequested -= Logout;
 
         _gameplayManager.OnRestartRequested -= RestartGame;
         _gameplayManager.OnExitToMenuRequested -= HandleExitToMenu;

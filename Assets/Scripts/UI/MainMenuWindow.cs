@@ -6,7 +6,6 @@ using Zenject;
 public class MainMenuWindow : BaseWindow
 {
     public event Action OnStartGame;
-    public event Action OnLogout;
     public event Action OnLeaderboard;
     public event Action OnQuit;
 
@@ -16,15 +15,13 @@ public class MainMenuWindow : BaseWindow
 
     private void Start()
     {
-        _logoutButton.onClick.AddListener(OnLogoutClicked);
+        if (_logoutButton != null)
+            _logoutButton.gameObject.SetActive(false);
+
         _leaderboardButton.onClick.AddListener(() => OnLeaderboard?.Invoke());
         _quitButton.onClick.AddListener(() => OnQuit?.Invoke());
     }
 
-    private void OnLogoutClicked()
-    {
-        OnLogout?.Invoke();
-    }
     private bool IsPointerOverUI()
     {
         return UnityEngine.EventSystems.EventSystem.current != null &&

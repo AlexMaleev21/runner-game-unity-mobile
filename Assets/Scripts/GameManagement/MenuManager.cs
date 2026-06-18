@@ -5,7 +5,6 @@ using Zenject;
 public class MenuManager : IInitializable
 {
     public event Action OnStartGameRequested;
-    public event Action OnLogoutRequested;
 
     private readonly LeaderboardWindow _leaderboardWindow;
     private MainMenuWindow _mainMenu;
@@ -25,8 +24,9 @@ public class MenuManager : IInitializable
 
     public void ShowMenu()
     {
-        _mainMenu.OnStartGame += () => OnStartGameRequested?.Invoke();
-        _mainMenu.OnLogout += () => OnLogoutRequested?.Invoke();
+        UnsubscribeMainMenuEvents();
+
+        _mainMenu.OnStartGame += HandleStartGame;
         _mainMenu.OnLeaderboard += ShowLeaderboard;
         _mainMenu.OnQuit += QuitGame;
 
@@ -50,11 +50,20 @@ public class MenuManager : IInitializable
 
     public void HideMenu()
     {
-        _mainMenu.OnStartGame -= () => OnStartGameRequested?.Invoke();
-        _mainMenu.OnLogout -= () => OnLogoutRequested?.Invoke();
-        _mainMenu.OnLeaderboard -= ShowLeaderboard;
-        _mainMenu.OnQuit -= QuitGame;
+        UnsubscribeMainMenuEvents();
 
         _mainMenu.Hide();
+    }
+
+    private void UnsubscribeMainMenuEvents()
+    {
+        _mainMenu.OnStartGame -= HandleStartGame;
+        _mainMenu.OnLeaderboard -= ShowLeaderboard;
+        _mainMenu.OnQuit -= QuitGame;
+    }
+
+    private void HandleStartGame()
+    {
+        OnStartGameRequested?.Invoke();
     }
 }

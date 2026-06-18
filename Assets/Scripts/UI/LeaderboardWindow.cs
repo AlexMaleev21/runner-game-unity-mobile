@@ -12,22 +12,18 @@ public class LeaderboardWindow : BaseWindow
     [SerializeField] private Button _closeButton;
 
     private ILeaderboardService _leaderboardService;
-    private IAuthService _authService;
-    private bool _isInitialized = false;
     private int _leaderboardItemsCount = 5;
     private List<LeaderboardItem> _leaderboardItems = new List<LeaderboardItem>();
 
     [Inject]
-    public void Construct(ILeaderboardService leaderboardService, IAuthService authService)
+    public void Construct(ILeaderboardService leaderboardService)
     {
         _leaderboardService = leaderboardService;
-        _authService = authService;
     }
 
     private void Start()
     {
         _closeButton.onClick.AddListener(Hide);
-        _isInitialized = false;
         Hide();
     }
 
@@ -39,22 +35,13 @@ public class LeaderboardWindow : BaseWindow
 
     public async Task UpdateLeaderboard()
     {
-        Debug.Log("1");
         var topScores = await _leaderboardService.GetTopScores(_leaderboardItemsCount);
-        Debug.Log(topScores.ToString());
-        if (!_isInitialized)
+
+        while (_leaderboardItems.Count < topScores.Count)
         {
-            for(int i = 0; i < topScores.Count; i++)
-            {
-                var item = Instantiate(_itemPrefab, _contentParent);
-                _leaderboardItems.Add(item);
-            }
-            _isInitialized = true;
+            var item = Instantiate(_itemPrefab, _contentParent);
+            _leaderboardItems.Add(item);
         }
-        //foreach (Transform child in _contentParent)
-        //{
-        //    Destroy(child.gameObject);
-        //}
 
         for (int i = 0; i < topScores.Count; i++)
         {
@@ -62,11 +49,21 @@ public class LeaderboardWindow : BaseWindow
             _leaderboardItems[i].gameObject.SetActive(true);
         }
 
-        if (_authService.IsAuthenticated)
+        for (int i = topScores.Count; i < _leaderboardItems.Count; i++)
         {
-            var best = await _leaderboardService.GetPlayerBestScore(_authService.UserId);
-            int rank = await _leaderboardService.GetPlayerRank(_authService.UserId);
+            _leaderboardItems[i].gameObject.SetActive(false);
+        }
+
+        var best = await _leaderboardService.GetPlayerBestScore();
+        if (best != null)
+        {
+            int rank = await _leaderboardService.GetPlayerRank();
             _playerItem.SetData(rank, best.username, best.score);
+            _playerItem.gameObject.SetActive(true);
+        }
+        else
+        {
+            _playerItem.gameObject.SetActive(false);
         }
     }
 }

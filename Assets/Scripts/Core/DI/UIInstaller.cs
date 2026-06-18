@@ -3,7 +3,6 @@ using Zenject;
 
 public class UIInstaller : MonoInstaller
 {
-    [SerializeField] private GameObject _authWindowPrefab;
     [SerializeField] private GameObject _mainMenuWindowPrefab;
     [SerializeField] private GameObject _gameOverWindowPrefab;
     [SerializeField] private GameObject _leaderboardWindowPrefab;
@@ -11,12 +10,6 @@ public class UIInstaller : MonoInstaller
 
     public override void InstallBindings()
     {
-        Container.Bind<AuthWindow>()
-            .FromComponentInNewPrefab(_authWindowPrefab)
-            .UnderTransformGroup("UI")
-            .AsSingle()
-            .NonLazy();
-
         Container.Bind<MainMenuWindow>()
             .FromComponentInNewPrefab(_mainMenuWindowPrefab)
             .UnderTransformGroup("UI")

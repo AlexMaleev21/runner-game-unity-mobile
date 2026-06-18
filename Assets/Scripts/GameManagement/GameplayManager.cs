@@ -13,6 +13,7 @@ public class GameplayManager : IInitializable
     private readonly PlayerController _player;
     private readonly ObstacleSpawner _spawner;
     private readonly ObstacleManipulator _obstacleMover;
+    private readonly CoinManipulator _coinMover;
     private readonly BackgroundMover _backgroundMover;
     private readonly SpeedManager _speedManager;
     private readonly ScoreManager _scoreManager;
@@ -27,6 +28,7 @@ public class GameplayManager : IInitializable
         PlayerController player,
         ObstacleSpawner spawner,
         ObstacleManipulator obstacleMover,
+        CoinManipulator coinMover,
         SpeedManager speedManager,
         ScoreManager scoreManager,
         InGameUI inGameUI,
@@ -39,6 +41,7 @@ public class GameplayManager : IInitializable
         _player = player;
         _spawner = spawner;
         _obstacleMover = obstacleMover;
+        _coinMover = coinMover;
         _speedManager = speedManager;
         _scoreManager = scoreManager;
         _inGameUI = inGameUI;
@@ -60,7 +63,9 @@ public class GameplayManager : IInitializable
     public void StartGame()
     {
         _obstacleMover.ClearAllObstacles();
+        _coinMover.ClearAllCoins();
         _obstacleMover.ResetGame();
+        _coinMover.ResetGame();
         _spawner.ResetSpawner();
 
         _player.SetEnabled(true);
@@ -81,7 +86,9 @@ public class GameplayManager : IInitializable
         _gameOverWindow.Hide();
 
         _obstacleMover.ClearAllObstacles();
+        _coinMover.ClearAllCoins();
         _obstacleMover.ResumeGame();
+        _coinMover.ResumeGame();
         _spawner.ResetSpawner();
         _speedManager.ResetSpeed();
         _scoreManager.ResetScore();
@@ -99,6 +106,7 @@ public class GameplayManager : IInitializable
     public void ExitToMenu()
     {
         _obstacleMover.ClearAllObstacles();
+        _coinMover.ClearAllCoins();
         _spawner.ResetSpawner();
 
         _player.StateMachine.ChangeState(PlayerStateType.Idle);
@@ -148,6 +156,7 @@ public class GameplayManager : IInitializable
         _player.SetEnabled(true);
         _player.StateMachine.ChangeState(PlayerStateType.Running);
         _obstacleMover.ResumeGame();
+        _coinMover.ResumeGame();
         _speedManager.Resume();
 
         _scoreManager.ResumeScore();

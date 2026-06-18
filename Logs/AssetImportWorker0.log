@@ -246,3 +246,41 @@ Received Import Request.
 Start importing Assets/Resources/Prefabs/HumanMale_Character@Fast Run 1.prefab using Guid(0dfc3f6b322a22d45b18095950b06e8c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'f82a5ef539749617f8efcccecd3da406') in 0.1575225 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 486
 
+========================================================================
+Received Import Request.
+  Time since last request: 3033.264434 seconds.
+  path: Assets/Resources/Configs
+  artifactKey: Guid(8d411298e4ec2494aa919b9520f15906) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Resources/Configs using Guid(8d411298e4ec2494aa919b9520f15906) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '34b8e51165234346ad91645c5ef94a99') in 0.0178282 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 3.59 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7184 unused Assets / (4.1 MB). Loaded Objects now: 8010.
+Memory consumption went from 149.5 MB to 145.4 MB.
+Total: 16.500200 ms (FindLiveObjects: 0.888500 ms CreateObjectMapping: 0.695700 ms MarkObjects: 12.703000 ms  DeleteObjects: 2.212200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 14.946892 seconds.
+  path: Assets/Scripts/Gameplay/Environment/Coins/CoinManipulator.cs
+  artifactKey: Guid(f6308695d604eec48942183e3a5db99d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Scripts/Gameplay/Environment/Coins/CoinManipulator.cs using Guid(f6308695d604eec48942183e3a5db99d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '5e806134d6cd845f44bc2a3079831394') in 0.0125792 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Scripts/Gameplay/Environment/Coins/CoinSpawner.cs
+  artifactKey: Guid(bf954afb9b32a8e41b35be681cd188e7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Scripts/Gameplay/Environment/Coins/CoinSpawner.cs using Guid(bf954afb9b32a8e41b35be681cd188e7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'b9a949e8972c7090aba9b16ef3326cc8') in 0.0089743 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

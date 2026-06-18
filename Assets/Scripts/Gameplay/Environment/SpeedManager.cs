@@ -5,6 +5,7 @@ using Zenject.SpaceFighter;
 public class SpeedManager : ITickable
 {
     private readonly ObstacleManipulator _obstacleMover;
+    private readonly CoinManipulator _coinMover;
     private readonly GameConfig _config;
     private readonly SignalBus _signalBus;
     
@@ -13,13 +14,19 @@ public class SpeedManager : ITickable
 
     private bool _isGameActive = true;
 
-    public SpeedManager(ObstacleManipulator obstacleMover, GameConfig config, SignalBus signalBus)
+    public SpeedManager(
+        ObstacleManipulator obstacleMover,
+        CoinManipulator coinMover,
+        GameConfig config,
+        SignalBus signalBus)
     {
         _obstacleMover = obstacleMover;
+        _coinMover = coinMover;
         _config = config;
         _signalBus = signalBus;
         CurrentSpeed = _config.InitialSpeed;
         _obstacleMover.SetSpeed(CurrentSpeed);
+        _coinMover.SetSpeed(CurrentSpeed);
 
         _signalBus.Subscribe<PlayerDiedSignal>(OnPlayerDied);
     }
@@ -30,6 +37,7 @@ public class SpeedManager : ITickable
         CurrentSpeed += _config.SpeedIncreasePerSecond * Time.deltaTime;
         CurrentSpeed = Mathf.Min(CurrentSpeed, _config.MaxSpeed);
         _obstacleMover.SetSpeed(CurrentSpeed);
+        _coinMover.SetSpeed(CurrentSpeed);
     }
 
     public void Resume()
@@ -46,6 +54,7 @@ public class SpeedManager : ITickable
     {
         CurrentSpeed = _config.InitialSpeed;
         _obstacleMover.SetSpeed(CurrentSpeed);
+        _coinMover.SetSpeed(CurrentSpeed);
         _isGameActive = true;
     }
 }

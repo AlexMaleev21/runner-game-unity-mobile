@@ -7,10 +7,11 @@ public class ManagersInstaller : MonoInstaller
     {
         Container.BindInterfacesAndSelfTo<SpeedManager>().AsSingle();
         Container.BindInterfacesAndSelfTo<ScoreManager>().AsSingle();
-        Container.BindInterfacesAndSelfTo<AuthManager>().AsSingle();
+        Container.Bind<PlayerProfileService>().AsSingle();
         Container.BindInterfacesAndSelfTo<AdsManager>().AsSingle();
         Container.BindInterfacesAndSelfTo<MenuManager>().AsSingle();
         Container.BindInterfacesAndSelfTo<GameplayManager>().AsSingle();
         Container.BindInterfacesTo<GameStateController>().AsSingle();
+        Container.Bind<NicknamePromptWindow>().FromNewComponentOnNewGameObject().AsSingle().NonLazy();
     }
 }
