@@ -3,27 +3,27 @@ using UnityEngine;
 public class SlidingState : IPlayerState
 {
     private readonly PlayerController _player;
-    private readonly PlayerConfig _config;
     private float _slideStartTime;
+    private float _stateDuration;
+    private const float DefaultStateDuration = 0.75f;
 
     public PlayerStateType StateType => PlayerStateType.Sliding;
 
-    public SlidingState(PlayerController player, PlayerConfig config)
+    public SlidingState(PlayerController player)
     {
         _player = player;
-        _config = config;
     }
 
     public void Enter()
     {
         _player.SetAnimationTrigger("Slide");
-        _player.SetColliderHeight(_config.SlideHeight);
         _slideStartTime = Time.time;
+        _stateDuration = Mathf.Max(_player.GetAnimationDuration("Slide"), DefaultStateDuration);
     }
 
     public void Update()
     {
-        if (Time.time > _slideStartTime + _config.SlideDuration)
+        if (Time.time > _slideStartTime + _stateDuration)
         {
             _player.StateMachine.ChangeState(PlayerStateType.Running);
         }
@@ -31,6 +31,5 @@ public class SlidingState : IPlayerState
 
     public void Exit()
     {
-        _player.SetColliderHeight(_config.NormalHeight);
     }
 }

@@ -46,6 +46,7 @@ public class GameInstaller : MonoInstaller
         SignalBusInstaller.Install(Container);
         Container.DeclareSignal<PlayerDiedSignal>();
         Container.DeclareSignal<ScoreUpdatedSignal>();
+        Container.DeclareSignal<CoinsUpdatedSignal>();
         Container.DeclareSignal<GameResumedSignal>();
     }
 

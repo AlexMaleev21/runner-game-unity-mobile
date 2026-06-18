@@ -9,18 +9,17 @@ public class CoinSpawner
         ZigZag,
         DriftLeft,
         DriftRight,
-        Wave,
-        Arc
+        Wave
     }
 
     private readonly List<int> _sideLaneBuffer = new List<int>(2);
-
     private readonly CoinSpawnConfig _coinConfig;
     private readonly ObstacleSpawnConfig _obstacleConfig;
     private readonly CoinPool _coinPool;
     private readonly CoinManipulator _coinManipulator;
     private readonly SpeedManager _speedManager;
     private readonly GameConfig _gameConfig;
+    private readonly PlayerConfig _playerConfig;
 
     public CoinSpawner(
         CoinSpawnConfig coinConfig,
@@ -28,7 +27,8 @@ public class CoinSpawner
         CoinPool coinPool,
         CoinManipulator coinManipulator,
         SpeedManager speedManager,
-        GameConfig gameConfig)
+        GameConfig gameConfig,
+        PlayerConfig playerConfig)
     {
         _coinConfig = coinConfig;
         _obstacleConfig = obstacleConfig;
@@ -36,6 +36,7 @@ public class CoinSpawner
         _coinManipulator = coinManipulator;
         _speedManager = speedManager;
         _gameConfig = gameConfig;
+        _playerConfig = playerConfig;
     }
 
     public void SpawnCoinRow(IReadOnlyCollection<int> occupiedObstacleLanes, float obstacleRowZ)
@@ -44,68 +45,100 @@ public class CoinSpawner
             return;
 
         int coinCount = Random.Range(_coinConfig.MinCoinsPerRow, _coinConfig.MaxCoinsPerRow + 1);
-        bool shouldSpawnArcOverObstacle = occupiedObstacleLanes != null
-            && occupiedObstacleLanes.Count > 0
-            && (occupiedObstacleLanes.Count >= 3 || Random.value < _coinConfig.ArcOverObstacleChance);
-
-        if (shouldSpawnArcOverObstacle)
-        {
-            SpawnArcOverObstacleRow(occupiedObstacleLanes, obstacleRowZ, coinCount);
-            return;
-        }
-
         SpawnFreeFormRow(occupiedObstacleLanes, obstacleRowZ, coinCount);
-    }
-
-    private void SpawnArcOverObstacleRow(IReadOnlyCollection<int> occupiedObstacleLanes, float obstacleRowZ, int coinCount)
-    {
-        int centerIndex = coinCount / 2;
-        int obstacleLane = GetRandomOccupiedLane(occupiedObstacleLanes);
-        float spacing = GetAboveObstacleCoinSpacing();
-        float startZ = obstacleRowZ - centerIndex * spacing;
-
-        for (int i = 0; i < coinCount; i++)
-        {
-            float coinZ = startZ + i * spacing;
-            float coinY = GetObstacleArcY(i, centerIndex, coinCount);
-            Vector3 position = new Vector3(obstacleLane * _obstacleConfig.LaneWidth, coinY, coinZ);
-            Coin coin = _coinPool.Get(position);
-            _coinManipulator.RegisterCoin(coin);
-        }
     }
 
     private void SpawnFreeFormRow(IReadOnlyCollection<int> occupiedObstacleLanes, float obstacleRowZ, int coinCount)
     {
-        CoinSnakePattern pattern = (CoinSnakePattern)Random.Range(0, System.Enum.GetValues(typeof(CoinSnakePattern)).Length);
         int currentLane = Random.Range(-1, 2);
+        bool startsOnObstacle = occupiedObstacleLanes != null && ContainsLane(occupiedObstacleLanes, currentLane);
+        bool useObstacleLane = false;
+
+        if (startsOnObstacle)
+        {
+            useObstacleLane = occupiedObstacleLanes.Count >= 3 || Random.value < _coinConfig.ArcOverObstacleChance;
+            if (!useObstacleLane && TryMoveSide(occupiedObstacleLanes, currentLane, out int sideLane))
+                currentLane = sideLane;
+            else
+                useObstacleLane = true;
+        }
+
+        CoinSnakePattern pattern = useObstacleLane ? CoinSnakePattern.Straight : GetRandomFreeFormPattern();
         int startLane = currentLane;
+
+        if (!useObstacleLane
+            && TryGetFirstObstacleOverlapLane(occupiedObstacleLanes, obstacleRowZ, startLane, pattern, coinCount, out int obstacleLane))
+        {
+            useObstacleLane = true;
+            pattern = CoinSnakePattern.Straight;
+            currentLane = obstacleLane;
+            startLane = obstacleLane;
+        }
+
         float currentY = _coinConfig.CoinY;
         float coinZ = obstacleRowZ;
-        bool hasCoinAboveObstacle = false;
 
         for (int i = 0; i < coinCount; i++)
         {
             if (i > 0)
-                coinZ += _coinConfig.CoinSpacingZ;
+                coinZ += useObstacleLane ? GetAboveObstacleCoinSpacing() : GetCoinSpacing(_coinConfig.CoinSpacingZ);
 
             if (i > 0)
                 currentLane = GetNextLane(pattern, startLane, currentLane, i);
 
-            currentY = GetPatternY(pattern, i, coinCount, currentY);
-            CoinObstacleAdjustment adjustment = ResolveObstacleOverlap(
+            currentY = _coinConfig.CoinY;
+            ResolveObstacleOverlap(
                 occupiedObstacleLanes,
                 obstacleRowZ,
                 coinZ,
-                hasCoinAboveObstacle,
+                useObstacleLane,
                 ref currentLane,
                 ref currentY);
-
-            hasCoinAboveObstacle = hasCoinAboveObstacle || adjustment == CoinObstacleAdjustment.Above;
 
             Vector3 position = new Vector3(currentLane * _obstacleConfig.LaneWidth, currentY, coinZ);
             Coin coin = _coinPool.Get(position);
             _coinManipulator.RegisterCoin(coin);
         }
+    }
+
+    private CoinSnakePattern GetRandomFreeFormPattern()
+    {
+        return (CoinSnakePattern)Random.Range(0, System.Enum.GetValues(typeof(CoinSnakePattern)).Length);
+    }
+
+    private bool TryGetFirstObstacleOverlapLane(
+        IReadOnlyCollection<int> occupiedObstacleLanes,
+        float obstacleRowZ,
+        int startLane,
+        CoinSnakePattern pattern,
+        int coinCount,
+        out int obstacleLane)
+    {
+        obstacleLane = startLane;
+
+        if (occupiedObstacleLanes == null || occupiedObstacleLanes.Count == 0)
+            return false;
+
+        int previewLane = startLane;
+        float previewZ = obstacleRowZ;
+
+        for (int i = 0; i < coinCount; i++)
+        {
+            if (i > 0)
+            {
+                previewZ += GetCoinSpacing(_coinConfig.CoinSpacingZ);
+                previewLane = GetNextLane(pattern, startLane, previewLane, i);
+            }
+
+            if (Mathf.Abs(previewZ - obstacleRowZ) <= _coinConfig.ObstacleZClearance
+                && ContainsLane(occupiedObstacleLanes, previewLane))
+            {
+                obstacleLane = previewLane;
+                return true;
+            }
+        }
+
+        return false;
     }
 
     private int GetNextLane(CoinSnakePattern pattern, int startLane, int currentLane, int index)
@@ -129,74 +162,69 @@ public class CoinSpawner
         }
     }
 
-    private float GetPatternY(CoinSnakePattern pattern, int index, int count, float currentY)
-    {
-        if (pattern != CoinSnakePattern.Arc || count <= 1)
-            return currentY;
-
-        float progress = index / (float)(count - 1);
-        return _coinConfig.CoinY + Mathf.Sin(progress * Mathf.PI) * (_coinConfig.AboveObstacleY - _coinConfig.CoinY);
-    }
-
-    private CoinObstacleAdjustment ResolveObstacleOverlap(
+    private void ResolveObstacleOverlap(
         IReadOnlyCollection<int> occupiedObstacleLanes,
         float obstacleRowZ,
         float coinZ,
-        bool hasCoinAboveObstacle,
+        bool allowAboveObstacle,
         ref int lane,
         ref float y)
     {
         if (occupiedObstacleLanes == null || !ContainsLane(occupiedObstacleLanes, lane))
-            return CoinObstacleAdjustment.None;
+            return;
 
         if (Mathf.Abs(coinZ - obstacleRowZ) > _coinConfig.ObstacleZClearance)
-            return CoinObstacleAdjustment.None;
+            return;
 
-        bool preferSide = hasCoinAboveObstacle || Random.value < 0.5f;
-        if (preferSide && TryMoveSide(occupiedObstacleLanes, lane, out int sideLane))
+        if (!allowAboveObstacle && TryMoveSide(occupiedObstacleLanes, lane, out int sideLane))
         {
             lane = sideLane;
             y = _coinConfig.CoinY;
-            return CoinObstacleAdjustment.Side;
+            return;
         }
 
-        if (hasCoinAboveObstacle)
-            return CoinObstacleAdjustment.None;
-
-        y = _coinConfig.AboveObstacleY;
-        return CoinObstacleAdjustment.Above;
+        y = GetAboveObstacleY();
     }
 
     private float GetAboveObstacleCoinSpacing()
     {
+        float spacing = GetCoinSpacing(_coinConfig.AboveObstacleCoinSpacingZ);
+        return Mathf.Max(spacing, _coinConfig.ObstacleZClearance + 0.05f);
+    }
+
+    private float GetCoinSpacing(float baseSpacing)
+    {
+        float speedProgress = GetSpeedProgress();
+        float spacingMultiplier = 1f + speedProgress * _coinConfig.CoinSpacingSpeedScale;
+        spacingMultiplier = Mathf.Min(spacingMultiplier, _coinConfig.MaxCoinSpacingSpeedMultiplier);
+
+        return baseSpacing * spacingMultiplier;
+    }
+
+    private float GetSpeedProgress()
+    {
         float initialSpeed = Mathf.Max(_gameConfig.InitialSpeed, 0.01f);
-        float speedFactor = Mathf.Max(_speedManager.CurrentSpeed / initialSpeed, 1f);
-        return _coinConfig.AboveObstacleCoinSpacingZ * speedFactor;
+        float maxSpeed = Mathf.Max(_gameConfig.MaxSpeed, initialSpeed);
+
+        return Mathf.InverseLerp(initialSpeed, maxSpeed, _speedManager.CurrentSpeed);
     }
 
-    private float GetObstacleArcY(int index, int centerIndex, int count)
+    private float GetAboveObstacleY()
     {
-        if (count <= 1)
-            return _coinConfig.AboveObstacleY;
+        float configuredJumpHeight = Mathf.Max(0f, _playerConfig.JumpHeight);
+        float forceBasedHeight = 0f;
 
-        float progress = index / (float)(count - 1);
-        return _coinConfig.CoinY + Mathf.Sin(progress * Mathf.PI) * (_coinConfig.AboveObstacleY - _coinConfig.CoinY);
-    }
-
-    private int GetRandomOccupiedLane(IReadOnlyCollection<int> occupiedObstacleLanes)
-    {
-        int targetIndex = Random.Range(0, occupiedObstacleLanes.Count);
-        int index = 0;
-
-        foreach (int lane in occupiedObstacleLanes)
+        if (_playerConfig.JumpForce > 0f && Mathf.Abs(Physics.gravity.y) > 0.01f)
         {
-            if (index == targetIndex)
-                return lane;
-
-            index++;
+            forceBasedHeight = (_playerConfig.JumpForce * _playerConfig.JumpForce) / (2f * Mathf.Abs(Physics.gravity.y));
         }
 
-        return 0;
+        float jumpHeight = configuredJumpHeight > 0f ? configuredJumpHeight : forceBasedHeight;
+
+        if (jumpHeight <= 0f)
+            return _coinConfig.AboveObstacleY;
+
+        return _coinConfig.CoinY + jumpHeight * _coinConfig.AboveObstacleJumpHeightMultiplier;
     }
 
     private bool TryMoveSide(IReadOnlyCollection<int> occupiedObstacleLanes, int lane, out int sideLane)
@@ -255,10 +283,4 @@ public class CoinSpawner
         return Mathf.Clamp(lane, -1, 1);
     }
 
-    private enum CoinObstacleAdjustment
-    {
-        None,
-        Side,
-        Above
-    }
 }

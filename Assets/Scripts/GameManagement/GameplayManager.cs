@@ -88,7 +88,7 @@ public class GameplayManager : IInitializable
         _obstacleMover.ClearAllObstacles();
         _coinMover.ClearAllCoins();
         _obstacleMover.ResumeGame();
-        _coinMover.ResumeGame();
+        _coinMover.ResetGame();
         _spawner.ResetSpawner();
         _speedManager.ResetSpeed();
         _scoreManager.ResetScore();

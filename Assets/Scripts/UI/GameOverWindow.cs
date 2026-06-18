@@ -28,8 +28,12 @@ public class GameOverWindow : BaseWindow
     {
         _restartButton.onClick.AddListener(() => OnRestart?.Invoke());
         _exitButton.onClick.AddListener(() => OnExit?.Invoke());
-        _watchAdButton.onClick.AddListener(() => OnWatchAd?.Invoke());
 
+        if (_watchAdButton != null)
+        {
+            _watchAdButton.gameObject.SetActive(false);
+            _watchAdButton.onClick.AddListener(() => OnWatchAd?.Invoke());
+        }
     }
 
     private void OnScoreUpdated(ScoreUpdatedSignal signal)

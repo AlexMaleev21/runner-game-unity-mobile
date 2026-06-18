@@ -11,6 +11,7 @@ public class CoinManipulator : MonoBehaviour
     private SignalBus _signalBus;
     private float _speed;
     private bool _isGameActive;
+    private int _collectedCoins;
 
     [Inject]
     public void Construct(CoinPool coinPool, SignalBus signalBus)
@@ -50,6 +51,8 @@ public class CoinManipulator : MonoBehaviour
 
     public void ResetGame()
     {
+        _collectedCoins = 0;
+        _signalBus.Fire(new CoinsUpdatedSignal { Coins = _collectedCoins });
         _isGameActive = true;
     }
 
@@ -81,6 +84,8 @@ public class CoinManipulator : MonoBehaviour
 
     private void OnCoinCollected(Coin coin)
     {
+        _collectedCoins++;
+        _signalBus.Fire(new CoinsUpdatedSignal { Coins = _collectedCoins });
         ReturnCoin(coin);
     }
 
@@ -103,4 +108,9 @@ public class CoinManipulator : MonoBehaviour
     {
         _signalBus?.Unsubscribe<PlayerDiedSignal>(OnPlayerDied);
     }
+}
+
+public struct CoinsUpdatedSignal
+{
+    public int Coins;
 }

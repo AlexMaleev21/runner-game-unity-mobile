@@ -13,9 +13,12 @@ public class ObstacleSpawner : MonoBehaviour
     private ObstacleManipulator _obstacleMover;
     private CoinSpawner _coinSpawner;
     private PlayerConfig _playerConfig;
+    private SpeedManager _speedManager;
+    private GameConfig _gameConfig;
 
     private float _nextSpawnTime;
     private float _currentSpawnInterval;
+    private int _previousObstacleCount;
 
     [Inject]
     public void Construct(
@@ -23,13 +26,17 @@ public class ObstacleSpawner : MonoBehaviour
         ObstacleSpawnConfig obstacleSpawnConfig,
         ObstacleManipulator obstacleManipulator,
         CoinSpawner coinSpawner,
-        PlayerConfig playerConfig)
+        PlayerConfig playerConfig,
+        SpeedManager speedManager,
+        GameConfig gameConfig)
     {
         _obstaclePool = obstaclePool;
         _config = obstacleSpawnConfig;
         _obstacleMover = obstacleManipulator;
         _coinSpawner = coinSpawner;
         _playerConfig = playerConfig;
+        _speedManager = speedManager;
+        _gameConfig = gameConfig;
     }
     private void Start()
     {
@@ -42,7 +49,11 @@ public class ObstacleSpawner : MonoBehaviour
         if (!enabled) return;
 
         float safeJumpInterval = _playerConfig.JumpDuration + _config.PostJumpSafetyTime;
-        _currentSpawnInterval = Mathf.Max(_config.BaseSpawnInterval, _config.MinSpawnInterval, safeJumpInterval);
+        float speedProgress = GetSpeedProgress();
+        float intervalReduction = _config.MaxSpeedIntervalReduction * speedProgress;
+        float speedScaledInterval = _config.BaseSpawnInterval * (1f - intervalReduction);
+
+        _currentSpawnInterval = Mathf.Max(_config.MinSpawnInterval, safeJumpInterval, speedScaledInterval);
 
         if (Time.time >= _nextSpawnTime)
         {
@@ -52,7 +63,14 @@ public class ObstacleSpawner : MonoBehaviour
 
     private void SpawnObstacleRow()
     {
-        int obstacleCount = Random.Range(_config.MinObstaclesPerRow, _config.MaxObstaclesPerRow + 1);
+        int minObstacleCount = _previousObstacleCount >= 3
+            ? Mathf.Min(_config.MinObstaclesPerRow, 2)
+            : _config.MinObstaclesPerRow;
+        int maxObstacleCount = _previousObstacleCount >= 3
+            ? Mathf.Min(_config.MaxObstaclesPerRow, 2)
+            : _config.MaxObstaclesPerRow;
+
+        int obstacleCount = Random.Range(minObstacleCount, maxObstacleCount + 1);
         ShuffleLanes();
         _occupiedObstacleLanes.Clear();
 
@@ -69,6 +87,7 @@ public class ObstacleSpawner : MonoBehaviour
         }
 
         _coinSpawner.SpawnCoinRow(_occupiedObstacleLanes, _config.SpawnZ);
+        _previousObstacleCount = obstacleCount;
         _nextSpawnTime = Time.time + _currentSpawnInterval;
     }
 
@@ -79,6 +98,14 @@ public class ObstacleSpawner : MonoBehaviour
             int randomIndex = Random.Range(i, _laneBuffer.Count);
             (_laneBuffer[i], _laneBuffer[randomIndex]) = (_laneBuffer[randomIndex], _laneBuffer[i]);
         }
+    }
+
+    private float GetSpeedProgress()
+    {
+        float initialSpeed = Mathf.Max(_gameConfig.InitialSpeed, 0.01f);
+        float maxSpeed = Mathf.Max(_gameConfig.MaxSpeed, initialSpeed);
+
+        return Mathf.InverseLerp(initialSpeed, maxSpeed, _speedManager.CurrentSpeed);
     }
 
     public void PauseSpawn(float duration)
@@ -96,5 +123,6 @@ public class ObstacleSpawner : MonoBehaviour
     public void ResetSpawner()
     {
         _nextSpawnTime = Time.time + _config.InitialSafeZone;
+        _previousObstacleCount = 0;
     }
 }

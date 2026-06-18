@@ -9,8 +9,6 @@ public class PlayerConfig : ScriptableObject
     [SerializeField] private float jumpForce = 8f;
     [SerializeField] private float jumpHeight = 2f;
     [SerializeField] private float jumpDuration = 1f;
-    [SerializeField] private float slideDuration = 1f;
-    [SerializeField] private float slideHeight = 0.5f;
     [SerializeField] private float normalHeight = 1f;
     [SerializeField] private LayerMask groundLayer;
 
@@ -20,8 +18,6 @@ public class PlayerConfig : ScriptableObject
     public float JumpForce => jumpForce;
     public float JumpHeight => jumpHeight;
     public float JumpDuration => jumpDuration;
-    public float SlideDuration => slideDuration;
-    public float SlideHeight => slideHeight;
     public float NormalHeight => normalHeight;
     public LayerMask GroundLayer => groundLayer;
 

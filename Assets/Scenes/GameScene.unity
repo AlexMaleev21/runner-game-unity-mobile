@@ -473,13 +473,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.30070576, y: 0, z: 0, w: 0.953717}
+  m_LocalRotation: {x: 0.32556805, y: 0, z: 0, w: 0.9455186}
   m_LocalPosition: {x: 0, y: 6.206, z: -22.846}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 35, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 38, y: 0, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1495,7 +1495,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a286eafa5da9654db882b189c38c3a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIInstaller
-  _authWindowPrefab: {fileID: 7738281645592908750, guid: 0b916bddcfac646448c1017195ea36ae, type: 3}
   _mainMenuWindowPrefab: {fileID: 1629345166716384194, guid: 1971db34cb6f86843b92dd7930aa3ee9, type: 3}
   _gameOverWindowPrefab: {fileID: 717625645929714333, guid: 6ba892b3c5e9ffd4fbcebae861610126, type: 3}
   _leaderboardWindowPrefab: {fileID: 2328280395107061591, guid: 4cdc44e3679ecea438468b47826edbfa, type: 3}

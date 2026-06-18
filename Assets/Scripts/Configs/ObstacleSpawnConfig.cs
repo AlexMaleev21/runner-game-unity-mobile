@@ -6,6 +6,8 @@ public class ObstacleSpawnConfig : ScriptableObject
     [SerializeField] private float initialSafeZone;
     [SerializeField] private float baseSpawnInterval;
     [SerializeField] private float minSpawnInterval;
+    [Tooltip("How much the obstacle spawn interval is reduced when current speed reaches MaxSpeed.")]
+    [SerializeField, Range(0f, 0.9f)] private float maxSpeedIntervalReduction = 0.35f;
     [SerializeField] private float postJumpSafetyTime = 0.2f;
     [SerializeField] private float laneWidth;
     [SerializeField] private int obstaclePoolSize;
@@ -18,6 +20,7 @@ public class ObstacleSpawnConfig : ScriptableObject
     public float InitialSafeZone => initialSafeZone;
     public float BaseSpawnInterval => baseSpawnInterval;
     public float MinSpawnInterval => minSpawnInterval;
+    public float MaxSpeedIntervalReduction => maxSpeedIntervalReduction;
     public float PostJumpSafetyTime => postJumpSafetyTime;
     public float LaneWidth => laneWidth;
     public int ObstaclePoolSize => obstaclePoolSize;
