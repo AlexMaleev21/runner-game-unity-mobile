@@ -12,15 +12,20 @@ public class ObstacleFactory : IObstacleFactory
         _config = config;
     }
 
-    public Obstacle Create(ObstacleType type, Vector3 position)
+    public Obstacle Create(GameObject prefab, ObstacleType type, Vector3 position)
     {
-        GameObject prefab = _config.GetPrefab(type);
         if (prefab == null)
         {
-            Debug.LogError("No planet obstacle prefab assigned in ObstacleSpawnConfig.");
+            Debug.LogError($"No {type} obstacle prefab assigned in ObstacleSpawnConfig.");
             return null;
         }
 
-        return _container.InstantiatePrefabForComponent<Obstacle>(prefab, position, Quaternion.identity, null);
+        GameObject instance = _container.InstantiatePrefab(prefab, position, Quaternion.identity, null);
+        Obstacle obstacle = instance.GetComponent<Obstacle>();
+        if (obstacle == null)
+            obstacle = instance.AddComponent<BasicObstacle>();
+
+        obstacle.SetType(type);
+        return obstacle;
     }
 }

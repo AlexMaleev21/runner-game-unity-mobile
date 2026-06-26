@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody _rigidbody;
     private Collider _playerCollider;
     private Animator _animator;
+    private GameObject _modelInstance;
     private int _currentLane = 0;
     private float _targetX;
     private float _baseY;
@@ -44,6 +45,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        ApplyConfiguredModel();
         _stateMachine.ChangeState(PlayerStateType.Idle);
         transform.position = _playerSpawnPoint.position;
         _baseY = transform.position.y;
@@ -217,6 +219,27 @@ public class PlayerController : MonoBehaviour
         _rigidbody.velocity = Vector3.zero;
 #endif
         _rigidbody.angularVelocity = Vector3.zero;
+    }
+
+    private void ApplyConfiguredModel()
+    {
+        if (_config.PlayerModelPrefab == null)
+            return;
+
+        DestroyExistingVisualChildren();
+
+        _modelInstance = Instantiate(_config.PlayerModelPrefab, transform);
+        _modelInstance.transform.localPosition = Vector3.zero;
+        _modelInstance.transform.localRotation = Quaternion.identity;
+        _modelInstance.transform.localScale = Vector3.one;
+
+        _animator = _modelInstance.GetComponentInChildren<Animator>();
+    }
+
+    private void DestroyExistingVisualChildren()
+    {
+        for (int i = transform.childCount - 1; i >= 0; i--)
+            Destroy(transform.GetChild(i).gameObject);
     }
 
     private void OnDestroy()

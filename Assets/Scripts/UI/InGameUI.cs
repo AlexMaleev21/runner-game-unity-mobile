@@ -24,13 +24,13 @@ public class InGameUI : MonoBehaviour
     private void OnScoreUpdated(ScoreUpdatedSignal signal)
     {
         if (_scoreText != null)
-            _scoreText.text = $"Score: {signal.Score}";
+            _scoreText.text = $"{signal.Score}";
     }
 
     private void OnCoinsUpdated(CoinsUpdatedSignal signal)
     {
         if (_coinsText != null)
-            _coinsText.text = $"Coins: {signal.Coins}";
+            _coinsText.text = $"{signal.Coins}";
     }
 
     public void Show()

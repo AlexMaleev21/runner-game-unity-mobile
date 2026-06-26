@@ -80,15 +80,39 @@ public class ObstacleSpawner : MonoBehaviour
             _occupiedObstacleLanes.Add(lane);
 
             Vector3 spawnPos = new Vector3(lane * _config.LaneWidth, _config.ObstacleY, _config.SpawnZ);
-            Obstacle obstacle = _obstaclePool.Get(_config.ObstacleType, spawnPos);
+            Obstacle obstacle = _obstaclePool.Get(
+                _config.GetRandomAsteroidPrefab(),
+                ObstacleType.Asteroid,
+                spawnPos);
 
             if (obstacle != null)
                 _obstacleMover.RegisterObstacle(obstacle);
         }
 
+        TrySpawnPlanet();
         _coinSpawner.SpawnCoinRow(_occupiedObstacleLanes, _config.SpawnZ);
         _previousObstacleCount = obstacleCount;
         _nextSpawnTime = Time.time + _currentSpawnInterval;
+    }
+
+    private void TrySpawnPlanet()
+    {
+        if (!_config.ShouldSpawnPlanet())
+            return;
+
+        int lane = Random.Range(-1, 2);
+        Vector3 spawnPos = new Vector3(lane * _config.LaneWidth, _config.ObstacleY, _config.SpawnZ);
+        Obstacle planet = _obstaclePool.Get(
+            _config.GetRandomPlanetPrefab(),
+            ObstacleType.Planet,
+            spawnPos);
+
+        if (planet != null)
+        {
+            _obstacleMover.RegisterObstacle(planet);
+            if (!_occupiedObstacleLanes.Contains(lane))
+                _occupiedObstacleLanes.Add(lane);
+        }
     }
 
     private void ShuffleLanes()

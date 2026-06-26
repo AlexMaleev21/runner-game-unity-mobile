@@ -2,5 +2,5 @@ using UnityEngine;
 
 public interface IObstacleFactory
 {
-    Obstacle Create(ObstacleType type, Vector3 position);
+    Obstacle Create(GameObject prefab, ObstacleType type, Vector3 position);
 }

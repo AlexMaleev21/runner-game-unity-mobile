@@ -50,6 +50,8 @@
     <Compile Include="Assets\Scripts\Gameplay\Environment\Coins\CoinPool.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Environment\SpeedManager.cs" />
     <Compile Include="Assets\Scripts\Configs\CoinSpawnConfig.cs" />
+    <Compile Include="Assets\Starfield Skybox\Demo\Script\LookCamera.cs" />
+    <Compile Include="Assets\Sci-Fi UI\Demo_Assets\scripts\GUI_Demo.cs" />
     <Compile Include="Assets\Scripts\GameManagement\GameplayManager.cs" />
     <Compile Include="Assets\Scripts\Core\DI\AdsInstaller.cs" />
     <Compile Include="Assets\Scripts\Core\DI\AuthInstaller.cs" />
@@ -109,6 +111,7 @@
     <Compile Include="Assets\Scripts\Gameplay\Player\States\RunningState.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Environment\ObstacleSpawner.cs" />
     <Compile Include="Assets\Scripts\Ads\AdMobAdsService.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Environment\Obstacles\BasicObstacle.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IInputStrategy.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Environment\Obstacles\Obstacle.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IObstacleFactory.cs" />

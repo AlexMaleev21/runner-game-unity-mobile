@@ -6,6 +6,11 @@ public abstract class Obstacle : MonoBehaviour
 
     public ObstacleType Type => _type;
 
+    public void SetType(ObstacleType type)
+    {
+        _type = type;
+    }
+
     public virtual void OnSpawn()
     {
         gameObject.SetActive(true);
